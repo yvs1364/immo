@@ -1,18 +1,13 @@
 class PropertysController < ApplicationController
-    def index
-        if params[:query].present?
-            @propertys = Property.where(name: params[:query])
-          else
-            @propertys = Property.all
-          end
+  def index
+    if params[:query].present?
+        @propertys = Property.where("city LIKE ?", "%#{params[:query]}%")
+    else
+        @propertys = Property.all
     end
-    def show
-        @property = Property.find(params[:id])
-    end
+  end
 
-    private
-
-    def search
-    params.require(:property).permit(:name)
-    end
+  def show
+    @property = Property.find(params[:id])
+  end
 end

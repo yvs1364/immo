@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'pages#home'
-  get "propertys", to: "propertys#index"
-  get    "propertys/:id",      to: "propertys#show", as: :property
-
+  get 'propertys', to: 'propertys#index'
+  get 'propertys/:id', to: 'propertys#show', as: :property
 end
