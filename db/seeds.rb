@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Property.destroy_all
+
+10.times do 
+    Property.create!(
+        name: ["title1", "title2", "title3", "title4", "title5", "title6", "title7", "title8", "title9", "title10"].sample,
+        room: rand(1...9), 
+        metre: rand(30...130),
+        city: "Marseille",
+        price:  rand(100000...500000),
+        ref: rand(1001...1011)
+    )
+end

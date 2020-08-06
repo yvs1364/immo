@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get "propertys", to: "propertys#index"
+  get    "propertys/:id",      to: "propertys#show", as: :property
+
 end

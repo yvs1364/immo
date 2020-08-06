@@ -1,0 +1,6 @@
+<h1>index</h1>
+<ul>
+  <% @propertys.each do |p| %>
+    <li><%= link_to p.name,  property_path(p) %></li>
+  <% end %>
+</ul>
