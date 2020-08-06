@@ -1,6 +1,27 @@
-<h1>index</h1>
-<ul>
-  <% @propertys.each do |p| %>
-    <li><%= link_to p.name,  property_path(p) %></li>
-  <% end %>
-</ul>
+<div class="container-fluid">
+     <div class="banner" style="background-color: blue">
+       <div class="container">
+        <h1>Catégorie <strong><%= link_to "Achat", propertys_path %></strong></h1>
+        <div class="centre">
+        <h2>Trouvez votre chez-vous </h2>
+          <%= form_tag @propertys_path, method: :get do %>
+          <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Où voulez-vous vivre?" %>
+           <%= submit_tag "Search", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+      </div>
+    </div>
+    <% @propertys.each do |p| %>
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+     <div class="card-product-infos">
+      <h2><%= link_to p.name,  property_path(p) %></h2>
+      <p> <%= p.city %> </p>
+    </div>
+  </div>
+   <% end %>
+</div>
+
