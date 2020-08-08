@@ -1,19 +1,20 @@
 <div class="container-fluid">
      <div class="banner" style="background-color: blue">
        <div class="container">
-        <h1>Catégorie <strong><%= link_to "Achat", propertys_path %></strong></h1>
-        <div class="centre">
+       <h3><strong><%= link_to "Blog", blog_path %></strong><strong><%= link_to "Contact", contact_path %></strong></h3>
+        <div class="search">
         <h2>Trouvez votre chez-vous </h2>
-          <%= form_tag @propertys_path, method: :get do %>
-          <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Où voulez-vous vivre?" %>
+        <h1> <strong><%= link_to "Achat", propertys_path %></strong> location catégorie3 Catégorie4 </h1>
+        
+          <%= form_tag propertys_path, method: :get do %>
+            <%= text_field_tag :query, params[:query],
+             class: "form-control", id: "city", placeholder: "Où voulez-vous vivre?"  %>
            <%= submit_tag "Search", class: "btn btn-primary" %>
-        <% end %>
-      </div>
+         <% end %>
+         </div>
       </div>
     </div>
+
     <% @propertys.each do |p| %>
   <div class="card-product">
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
