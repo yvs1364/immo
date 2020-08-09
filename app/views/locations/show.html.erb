@@ -1,0 +1,11 @@
+<div class="container-fluid">
+<h2><%= @location.name %></h2>
+
+<p><strong>Pièces: </strong><%= @location.room %></p>
+<p><%= @location.metre %> <strong>m²</strong></p>
+<p><strong>Ville: </strong><%= @location.city %></p>
+<p><strong>Prix: </strong><%= @location.price %><strong> €</strong></p>
+<p><strong>Reférence de l'annonce: </strong><%= @location.ref %></p>
+
+<h2><%= link_to "back", locations_path %> </h2>
+</div>

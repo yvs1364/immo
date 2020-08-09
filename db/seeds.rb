@@ -16,6 +16,7 @@ Actuality.create!(
   texte: %w[title1 title2 title3 title4 title5 title6 title7 title8 title9 title10].sample
 )
 end
+
 15.times do
   Property.create!(
     name: %w[title1 title2 title3 title4 title5 title6 title7 title8 title9 title10].sample,
@@ -26,3 +27,28 @@ end
     ref: rand(1001...1011)
   )
 end
+
+15.times do
+  Location.create!(
+    name: %w[title1 title2 title3 title4 title5 title6 title7 title8 title9 title10].sample,
+    room: rand(1...9),
+    metre: rand(30...130),
+    city: %w[Marseille Pau Grans].sample,
+    price: rand(300...2000),
+    ref: rand(1051...1100)
+  )
+end
+
+15.times do
+  Lot.create!(
+    name: %w[title1 title2 title3 title4 title5 title6 title7 title8 title9 title10].sample,
+    city: %w[Marseille Pau Grans].sample,
+    metre: rand(1000...10000),
+    price: rand(10000...200000),
+    ref: rand(1101...1150)
+  )
+end
+
+puts "achat #{Property.count}"
+puts "location #{Location.count}"
+puts "terrain #{Lot.count}"

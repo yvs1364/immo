@@ -1,8 +1,9 @@
     <div class="container-fluid">
      <div class="banner" style="background-color:  #59ABE3">
      <div class="container">
+        <h4><strong><%= link_to "Faire une recherche ", propertys_path %></strong></h4>
          <h3><strong><%= link_to "Blog", blog_path %></strong> <strong><%= link_to "Contact", contact_path %></strong></h3>
-        <h1> <strong><%= link_to "Actualité", actualitys_path, {:style=>'color: red;'} %></strong>  Nouveauté </h1>
+        <h1> <strong><%= link_to "Actualité", actualitys_path, {:style=>'color: rgba(255,255,255, 0.8);'} %></strong>  Nouveauté </h1>
      </div>
 </div>
     <% @actualitys.each do |a| %>

@@ -1,0 +1,10 @@
+<div class="container-fluid">
+<h2><%= @lot.name %></h2>
+
+<p><%= @lot.metre %> <strong>m²</strong></p>
+<p><strong>Ville: </strong><%= @lot.city %></p>
+<p><strong>Prix: </strong><%= @lot.price %><strong> €</strong></p>
+<p><strong>Reférence de l'annonce: </strong><%= @lot.ref %></p>
+
+<h2><%= link_to "back", lots_path %> </h2>
+</div>
