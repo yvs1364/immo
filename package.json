@@ -8,12 +8,15 @@
     "@rails/webpacker": "4.2.2",
     "algoliasearch": "^4.4.0",
     "bootstrap": "^4.5.2",
+    "instantsearch.css": "^7.4.3",
     "js-autocomplete": "^1.0.4",
     "places.js": "^1.19.0",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
   "devDependencies": {
+    "css-loader": "^4.2.1",
+    "style-loader": "^1.2.1",
     "webpack-dev-server": "^3.11.0"
   }
 }
