@@ -3,7 +3,7 @@
        <div class="container">
        <h3><strong><%= link_to "Blog", actualitys_path %></strong> <strong><%= link_to "Contact", contact_path %></strong></h3>
         <h2>Trouvez votre chez-vous </h2>
-  <div class="search">
+        <div class="search">
           <%= form_tag propertys_path, method: :get do %>
             <%= text_field_tag :city, params[:city],
              class: "form-control", id: "city", placeholder: "Où voulez-vous vivre?"  %>
@@ -11,22 +11,32 @@
              class: "form-control", id: "price", placeholder: "Prix max"  %>
            <%= submit_tag "Search", class: "btn btn-primary" %>
          <% end %>
-                  </div>
+        </div>
         <h1> <strong><%= link_to "Achat", propertys_path, {:style=>'color: rgba(255,255,255, 0.8);'} %>
          <%= link_to "Location", locations_path %>
          <%= link_to "Terrain", lots_path %>
          <%= link_to "Estimation", estimate_path %> </strong></h1>
       </div>
     </div>
-
-    <% @propertys.each do |p| %>
-  <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    
+  <% @propertys.each do |p| %>
+<%if p == @propertys.first %>
+ <div class="card-product" id="red">
+     <%= image_tag "house.jpg" %>
      <div class="card-product-infos">
       <h2><%= link_to p.name,  property_path(p) %></h2>
       <p> <%= p.city %> </p>
     </div>
   </div>
+  <%else%>
+      <div class="card-product">
+     <%= image_tag "house.jpg" %>
+      <div class="card-product-infos">
+        <h2><%= link_to p.name,  property_path(p) %></h2>
+        <p> <%= p.city %> </p>
+      </div>
+    </div>
+      <%end%>
    <% end %>
 </div>
 

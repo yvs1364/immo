@@ -19,14 +19,24 @@
       </div>
     </div>
 
-    <% @locations.each do |l| %>
-  <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <% @locations.each do |locate| %>
+<%if locate == @locations.first %>
+ <div class="card-product" id="red">
+     <%= image_tag "locate.jpg" %>
      <div class="card-product-infos">
-      <h2><%= link_to l.name,  location_path(l) %></h2>
-      <p> <%= l.city %> </p>
+      <h2><%= link_to locate.name,  property_path(locate) %></h2>
+      <p> <%= locate.city %> </p>
     </div>
   </div>
+  <%else%>
+      <div class="card-product">
+     <%= image_tag "locate.jpg" %>
+      <div class="card-product-infos">
+        <h2><%= link_to locate.name,  property_path(locate) %></h2>
+        <p> <%= locate.city %> </p>
+      </div>
+    </div>
+      <%end%>
    <% end %>
 </div>
 
