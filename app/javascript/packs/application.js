@@ -6,5 +6,5 @@
 
 import {initAutocomplete} from '../plugins/init_autocomplete';
 initAutocomplete();
-import {initMap} from "../plugins/init_Map"
-initMap();
+// import {initMap} from "../plugins/init_Map"
+// initMap();
