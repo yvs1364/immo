@@ -1,19 +1,21 @@
 <div class="container-fluid">
-     <div class="banner" style="background-color: #59ABE3">
+     <div class="banner">
        <div class="container">
        <h3><strong><%= link_to "Blog", actualitys_path %></strong> <strong><%= link_to "Contact", contact_path %></strong></h3>
         <h2>Trouvez votre chez-vous </h2>
   <div class="search">
           <%= form_tag locations_path, method: :get do %>
-            <%= text_field_tag :query, params[:query],
+            <%= text_field_tag :city, params[:city],
              class: "form-control", id: "city", placeholder: "Où voulez-vous vivre?"  %>
-              <%= text_field_tag :query, params[:query],
+              <%= text_field_tag :price, params[:price],
              class: "form-control", id: "price", placeholder: "Prix max"  %>
            <%= submit_tag "Search", class: "btn btn-primary" %>
          <% end %>
                   </div>
-        <h1> <strong><%= link_to "Achat", propertys_path %></strong> <strong><%= link_to "Location", locations_path, {:style=>'color: rgba(255,255,255, 0.8);'}%> <%= link_to "terrain", lots_path %> estimation </h1>
-
+        <h1> <strong><%= link_to "Achat", propertys_path %>
+         <%= link_to "Location", locations_path, {:style=>'color: rgba(255,255,255, 0.8);'}%>
+         <%= link_to "Terrain", lots_path %> 
+         <%= link_to "Estimation", estimate_path %> </strong> </h1>
       </div>
     </div>
 

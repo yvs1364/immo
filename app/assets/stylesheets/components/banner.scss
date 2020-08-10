@@ -3,9 +3,10 @@
     background-position: center;
     padding: 12%;
     position: relative;
+    background-image: url(asset-path('house_snow.jpg'));
   }
-
   .banner h1 {
+    font-family: 'Montserrat',sans-serif;
     color: white;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     font-size: 32px;
@@ -15,6 +16,7 @@
     margin-left: 10%;
   }
   .banner h2 {
+    font-family: 'Montserrat',sans-serif;
     position: absolute;
     color: white;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -23,6 +25,8 @@
     margin-left: 10%;
   }
   .banner h3 {
+    font-family: 'Montserrat',sans-serif;
+    margin-top: 10px;
     margin-right: 10px;
     color: white;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -32,31 +36,37 @@
     top:0;
     right:0;
   }
-  .banner h4 {
+  .banner h5 {
+    font-family: 'Montserrat',sans-serif;
+    margin-top: 10px;
     margin-left: 10px;
     color: white;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 32px;
+    font-size: 26px;
     font-weight: bold;
     position:absolute;
     top:0;
     left:0;
   }
   .banner p {
+    font-family: 'Montserrat',sans-serif;
     font-size: 20px;
     color: white;
     opacity: .7;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
   .banner a {
+    font-family: 'Montserrat',sans-serif;
     color: white;
     display: inline;
   }
   .banner a:hover{
+    font-family: 'Montserrat',sans-serif;
     text-decoration: none !important;
     color:rgba(255,255,255, 0.9);
   }
 .banner .btn{
+  font-family: 'Montserrat',sans-serif;
   position: absolute;
   width: 80px !important;
 }

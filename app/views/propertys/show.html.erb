@@ -1,11 +1,19 @@
 <div class="container-fluid">
 <h2><%= @property.name %></h2>
+<h5><%= link_to "Retour", propertys_path %> </h5>
+</div>
+<div class="container">
+<div class="row">
+    <div class="col">
+     <div id="map"></div>
+    </div>
+    <div class="col">
+        <p><strong>Pièces: </strong><%= @property.room %></p>
+        <p><%= @property.metre %> <strong>m²</strong></p>
+        <p><strong>Ville: </strong><%= @property.city %></p>
+        <p><strong>Prix: </strong><%= @property.price %><strong> €</strong></p>
+        <p><strong>Reférence de l'annonce: </strong><%= @property.ref %></p>
+    </div>
+  </div>
 
-<p><strong>Pièces: </strong><%= @property.room %></p>
-<p><%= @property.metre %> <strong>m²</strong></p>
-<p><strong>Ville: </strong><%= @property.city %></p>
-<p><strong>Prix: </strong><%= @property.price %><strong> €</strong></p>
-<p><strong>Reférence de l'annonce: </strong><%= @property.ref %></p>
-
-<h2><%= link_to "back", propertys_path %> </h2>
 </div>
