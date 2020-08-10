@@ -108,6 +108,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
+    pg (1.2.3)
     pg_search (2.3.2)
       activerecord (>= 5.2)
       activesupport (>= 5.2)
@@ -219,6 +220,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.2)
+  pg
   pg_search (~> 2.3.0)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
