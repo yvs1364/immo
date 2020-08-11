@@ -1,12 +1,26 @@
 class LotsController < ApplicationController
     def index
+      grow = 1
+    scope = 10 * grow
         if params[:city].present? && params[:price].present?
-          @lots = Lot.where("city LIKE  ? ", "%#{params[:city]}%")
+          results = Lot.near(params[:city], scope).order(:distance)
+          while results.empty?
+            grow += 2
+            scope += 100 * grow
+            results = Lot.near(params[:city], scope, units: :km).order(:distance).limit(4)
+          end
+          @lots = results
           @lots = Lot.where("price LIKE  ? ", "%#{params[:price]}%")
-        elsif params[:city].present?
-          @lots = Lot.where("city LIKE  ? ", "%#{params[:city]}%")
         elsif params[:price].present?
           @lots = Lot.where("price LIKE  ? ", "%#{params[:price]}%")
+        elsif params[:city].present?
+          results = Lot.near(params[:city], scope).order(:distance)
+          while results.empty?
+            grow += 2
+            scope += 100 * grow
+            results = Lot.near(params[:city], scope, units: :km).order(:distance).limit(4)
+          end
+          @lots = results
         else
           @lots = Lot.all
         end

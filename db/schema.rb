@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_11_104240) do
+ActiveRecord::Schema.define(version: 2020_08_11_132443) do
 
   create_table "actualities", force: :cascade do |t|
     t.string "name"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 2020_08_11_104240) do
     t.integer "ref"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "lots", force: :cascade do |t|
@@ -38,6 +40,8 @@ ActiveRecord::Schema.define(version: 2020_08_11_104240) do
     t.integer "ref"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "nouvelles", force: :cascade do |t|
@@ -56,6 +60,8 @@ ActiveRecord::Schema.define(version: 2020_08_11_104240) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
     t.integer "price"
+    t.float "latitude"
+    t.float "longitude"
   end
 
 end
