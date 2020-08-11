@@ -9,13 +9,22 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Property.destroy_all
 Actuality.destroy_all
+Nouvelle.destroy_all
+Location.destroy_all
+Lot.destroy_all
 
 10.times do
-Actuality.create!(
+  Actuality.create!(
   name: %w[title1 title2 title3 title4 title5 title6 title7 title8 title9 title10].sample,
   texte: %w[title1 title2 title3 title4 title5 title6 title7 title8 title9 title10].sample
 )
 end
+4.times do
+  Nouvelle.create!(
+    name: %w[title1 title2 title3 title4 title5 title6 title7 title8 title9 title10].sample,
+    texte: %w[title1 title2 title3 title4 title5 title6 title7 title8 title9 title10].sample
+  )
+  end
 
 15.times do
   Property.create!(
@@ -49,6 +58,8 @@ end
   )
 end
 
+puts "actuality #{Actuality.count}"
+puts "nouvelle #{Nouvelle.count}"
 puts "achat #{Property.count}"
 puts "location #{Location.count}"
 puts "terrain #{Lot.count}"

@@ -11,7 +11,7 @@
              class: "form-control", id: "price", placeholder: "Prix max"  %>
            <%= submit_tag "Search", class: "btn btn-primary" %>
          <% end %>
-                  </div>
+     </div>
         <h1> <strong><%= link_to "Achat", propertys_path %>
          <%= link_to "Location", locations_path, {:style=>'color: rgba(255,255,255, 0.8);'}%>
          <%= link_to "Terrain", lots_path %> 
@@ -24,7 +24,7 @@
  <div class="card-product" id="red">
      <%= image_tag "locate.jpg" %>
      <div class="card-product-infos">
-      <h2><%= link_to locate.name,  property_path(locate) %></h2>
+      <h2><%= link_to locate.name,  location_path(locate) %></h2>
       <p> <%= locate.city %> </p>
     </div>
   </div>

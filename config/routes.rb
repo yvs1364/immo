@@ -6,8 +6,10 @@ Rails.application.routes.draw do
   get "blog", to: "pages#blog"
   get "contact", to: "pages#contact"
   get "estimate", to: "pages#estimate"
+  get "new", to: "pages#new"
   resources :propertys
   resources :locations
   resources :lots
   resources :actualitys
+  resources :nouvelles
 end

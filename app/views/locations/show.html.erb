@@ -1,11 +1,38 @@
+<div class="container-fluid">
+<h5><%= link_to "Retour", locations_path %> </h5>
+</div>
 <div class="container">
-<h2><%= @location.name %></h2>
+<div class="row">
+    <div class="col">
+        <div class="zoom">
+            <%= image_tag "room.jpg", id: "images" %>
+            <%= image_tag "room2.jpg", id: "images" %>
+            <%= image_tag "room3.jpg", id: "images" %>
+            <%= image_tag "room4.jpg", id: "images" %>
+        </div>
+    </div>
+    <div class="col" style="border: 3px solid #78788c;">
+        <p><strong>Pièces: </strong><%= @location.room %></p>
+        <p><%= @location.metre %> <strong>m²</strong></p>
+        <p><strong>Ville: </strong><%= @location.city %></p>
+        <p><strong>Prix: </strong><%= @location.price %><strong> €</strong></p>
+        <p><strong>Reférence de l'annonce: </strong><%= @location.ref %></p>
+    </div>
+  </div>
+    <div class="container">
 
-<p><strong>Pièces: </strong><%= @location.room %></p>
-<p><%= @location.metre %> <strong>m²</strong></p>
-<p><strong>Ville: </strong><%= @location.city %></p>
-<p><strong>Prix: </strong><%= @location.price %><strong> €</strong></p>
-<p><strong>Reférence de l'annonce: </strong><%= @location.ref %></p>
-
-<h2><%= link_to "back", locations_path %> </h2>
+    <div id="map-container">
+    <div id="map"></div>
+    <script>
+function initMap() {
+  var marseille = {lat: 43.3, lng: 5.4};
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 15, center: marseille});
+  var marker = new google.maps.Marker({position: marseille, map: map});
+}
+    </script>
+<script defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoU_mc_G8koG5TTc4d_OKXDYNoFxXcU_s&callback=initMap">
+</script>
+</div>
 </div>

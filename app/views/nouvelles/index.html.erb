@@ -1,0 +1,17 @@
+    <div class="container-fluid">
+     <div class="banner">
+     <div class="container">
+        <h5><strong><%= link_to "Faire une recherche ", propertys_path %></strong></h5>
+         <h3><strong><%= link_to "Blog", blog_path %></strong> <strong><%= link_to "Contact", contact_path %></strong></h3>
+        <h1> <strong><%= link_to "Actualité", actualitys_path %> <%= link_to "Nouveauté", nouvelles_path, {:style=>'color: rgba(255,255,255, 0.8);'} %></strong> </h1>
+     </div>
+</div>
+    <% @nouvelles.each do |n| %>
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+     <div class="card-product-infos">
+      <p> <%= n.name %> </p>
+    </div>
+  </div>
+     <% end %>
+</div>
