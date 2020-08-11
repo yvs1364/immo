@@ -12,9 +12,9 @@ class LocationsController < ApplicationController
       end
       @locations = results
 
-        @locations =  Location.where("price LIKE  ? ", "%#{params[:price]}%")
+        @locations =  Location.where("cast(price as text) LIKE  ? ", "%#{params[:price]}%")
     elsif params[:price].present?
-      @locations =  Location.where("price LIKE  ? ", "%#{params[:price]}%")
+      @locations =  Location.where("cast(price as text) LIKE  ? ", "%#{params[:price]}%")
     elsif params[:city].present?
       results = Location.near(params[:city], scope).order(:distance)
       while results.empty?

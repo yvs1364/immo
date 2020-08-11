@@ -10,9 +10,9 @@ class LotsController < ApplicationController
             results = Lot.near(params[:city], scope, units: :km).order(:distance).limit(4)
           end
           @lots = results
-          @lots = Lot.where("price LIKE  ? ", "%#{params[:price]}%")
+          @lots = Lot.where("cast(price as text)  LIKE  ? ", "%#{params[:price]}%")
         elsif params[:price].present?
-          @lots = Lot.where("price LIKE  ? ", "%#{params[:price]}%")
+          @lots = Lot.where("cast(price as text) LIKE  ? ", "%#{params[:price]}%")
         elsif params[:city].present?
           results = Lot.near(params[:city], scope).order(:distance)
           while results.empty?
