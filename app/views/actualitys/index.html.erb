@@ -10,7 +10,7 @@
   <div class="card-product">
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
      <div class="card-product-infos">
-      <p> <%= a.name %> </p>
+          <h2> <%= link_to a.name,  actuality_path(a) %> </h2>
     </div>
   </div>
      <% end %>

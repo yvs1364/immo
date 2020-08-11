@@ -10,7 +10,7 @@
   <div class="card-product">
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
      <div class="card-product-infos">
-      <p> <%= n.name %> </p>
+      <h2> <%= link_to n.name,  nouvelle_path(n) %> </h2>
     </div>
   </div>
      <% end %>

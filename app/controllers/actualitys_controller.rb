@@ -2,5 +2,7 @@ class ActualitysController < ApplicationController
     def  index
     @actualitys = Actuality.all
     end
-    def show;end
+    def show
+    @actuality = Actuality.find(params[:id])
+    end
 end

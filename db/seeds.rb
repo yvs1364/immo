@@ -16,13 +16,13 @@ Lot.destroy_all
 10.times do
   Actuality.create!(
   name: %w[title1 title2 title3 title4 title5 title6 title7 title8 title9 title10].sample,
-  texte: %w[title1 title2 title3 title4 title5 title6 title7 title8 title9 title10].sample
+  texte: "Ceci est un texte."
 )
 end
 4.times do
   Nouvelle.create!(
     name: %w[title1 title2 title3 title4 title5 title6 title7 title8 title9 title10].sample,
-    texte: %w[title1 title2 title3 title4 title5 title6 title7 title8 title9 title10].sample
+    texte: "Ceci est un texte."
   )
   end
 
