@@ -23,8 +23,14 @@ class PropertysController < ApplicationController
       end
       @propertys = results
     else
-        @propertys = Property.all
+      @propertys = Property.all
     end
+    # @markers = @propertys.map do |property|
+    #   {
+    #     lat: property.latitude,
+    #     lng: property.longitude
+    #   }
+    # end
   end
   def show
     @property = Property.find(params[:id])

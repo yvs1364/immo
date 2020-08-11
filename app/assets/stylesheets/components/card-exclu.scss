@@ -1,3 +1,20 @@
 #red{
-    background: red !important;
+  z-index: 10;
+  height:150px;
   }
+  .ruban {
+    background: red;
+    height: 25px;
+    width: 108em;
+    position: relative;
+    left:-15px;
+    top: 10px;
+    float: left;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+    z-index: 100;
+    }
+    .ruban h2 {
+    font-family: 'Montserrat',sans-serif;
+   color: white;
+   padding: 4px;
+    }
