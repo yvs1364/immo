@@ -24,7 +24,7 @@
  <div class="card-product" id="red">
      <%= image_tag "locate.jpg" %>
      <div class="card-product-infos">
-      <h2><%= link_to locate.name,  location_path(locate) %></h2>
+      <h2><%= link_to "#{locate.name} de #{locate.metre} m²",  location_path(locate) %></h2>
       <p> <%= locate.city %> </p>
         <div class="ruban">
           <h2>Exclusivité</h2>  
@@ -35,7 +35,7 @@
       <div class="card-product">
      <%= image_tag "locate.jpg" %>
       <div class="card-product-infos">
-        <h2><%= link_to locate.name,  location_path(locate) %></h2>
+        <h2><%= link_to "#{locate.name} de #{locate.metre} m²",  location_path(locate) %></h2>
         <p> <%= locate.city %> </p>
       </div>
     </div>

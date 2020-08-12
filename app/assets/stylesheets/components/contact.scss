@@ -1,7 +1,7 @@
 
 #form-contact{
-    width:340px;
-    height:485px;
+    width:60em;
+    height:75em;
     background:#e6e6e6;
     border-radius:8px;
     box-shadow:0 0 40px -10px #000;
@@ -13,7 +13,7 @@
     position:relative;
 }
 #h2-contact{
-    margin:10px 0;
+    margin-top :10px;
     padding-bottom:10px;
     width:250px;
     color:#78788c;
@@ -41,6 +41,10 @@ p:before{
     font-size:14px;
     color:#5a5a5a;
 }
+#p1{
+    margin:-20px 0 0;
+    color:#4b4a4a;
+}
 button{
     float:right;
     padding:8px 12px;
@@ -58,12 +62,12 @@ button:hover{
 #bar{
     content:'Hi';
     position:absolute;
-    bottom:-15px;
+    top:-20px;
     right:-20px;
     background:#50505a;
     color:#fff;
-    width:320px;
-    padding:16px 4px 16px 0;
+    width:50em;
+    padding:16px 4px 16px 80px;
     border-radius:6px;
     font-size:13px;
     box-shadow:10px 10px 40px -14px #000;
@@ -89,3 +93,10 @@ button:hover{
     text-decoration: none !important;
     color:rgba(255,255,255, 0.9);
   }
+  #h2-map{
+    margin-top :3em;
+    padding-bottom:10px;
+    width:250px;
+    color:#78788c;
+    border-bottom:3px solid #78788c;
+}

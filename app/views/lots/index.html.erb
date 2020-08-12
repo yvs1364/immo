@@ -24,7 +24,7 @@
   <div class="card-product" id="red">
      <%= image_tag "field.jpg" %>
      <div class="card-product-infos">
-      <h2><%= link_to l.name,  lot_path(l) %></h2>
+      <h2><%= link_to "#{l.name} de #{l.metre} m²" ,  lot_path(l) %></h2>
       <p> <%= l.city %> </p>
        <div class="ruban">
           <h2>Exclusivité</h2>  
@@ -35,7 +35,7 @@
       <div class="card-product">
            <%= image_tag "field.jpg" %>
       <div class="card-product-infos">
-        <h2><%= link_to l.name,  lot_path(l) %></h2>
+        <h2><%= link_to "#{l.name} de #{l.metre} m²" ,  lot_path(l) %></h2>
         <p> <%= l.city %> </p>
       </div>
     </div>

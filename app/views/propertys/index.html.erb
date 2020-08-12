@@ -24,7 +24,7 @@
  <div class="card-product" id="red">
      <%= image_tag "house.jpg" %>
      <div class="card-product-infos">
-      <h2><%= link_to p.name,  property_path(p) %></h2>
+      <h2><%= link_to "#{p.name} de #{p.metre} m²",  property_path(p) %></h2>
       <p> <%= p.city %> </p>
         <div class="ruban">
                 <h2>Exclusivité</h2>  
@@ -35,7 +35,7 @@
       <div class="card-product">
      <%= image_tag "house.jpg" %>
       <div class="card-product-infos">
-        <h2><%= link_to p.name,  property_path(p) %></h2>
+        <h2><%= link_to "#{p.name} de #{p.metre} m²",  property_path(p) %></h2>
         <p> <%= p.city %> </p>
       </div>
     </div>

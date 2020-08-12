@@ -28,7 +28,7 @@ end
 
 15.times do
   Property.create!(
-    name: %w[title1 title2 title3 title4 title5 title6 title7 title8 title9 title10].sample,
+    name: %w[Maison Appartement].sample,
     room: rand(1...9),
     metre: rand(30...130),
     city: %w[Marseille Pau Grans].sample,
@@ -39,7 +39,7 @@ end
 
 15.times do
   Location.create!(
-    name: %w[title1 title2 title3 title4 title5 title6 title7 title8 title9 title10].sample,
+    name: %w[Maison Appartement].sample,
     room: rand(1...9),
     metre: rand(30...130),
     city: %w[Marseille Pau Grans].sample,
@@ -50,7 +50,7 @@ end
 
 15.times do
   Lot.create!(
-    name: %w[title1 title2 title3 title4 title5 title6 title7 title8 title9 title10].sample,
+    name: "Terrain",
     city: %w[Marseille Pau Grans].sample,
     metre: rand(1000...10000),
     price: rand(10000...200000),
