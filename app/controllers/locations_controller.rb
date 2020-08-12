@@ -1,9 +1,11 @@
-class LocationsController < ApplicationController
-    def index
-      grow = 1
-      scope = 10 * grow
+# frozen_string_literal: true
 
-    if params[:city].present?  && params[:price].present?
+class LocationsController < ApplicationController
+  def index
+    grow = 1
+    scope = 10 * grow
+
+    if params[:city].present? && params[:price].present?
       results = Location.near(params[:city], scope).order(:distance)
       while results.empty?
         grow += 2
@@ -12,9 +14,9 @@ class LocationsController < ApplicationController
       end
       @locations = results
 
-        @locations =  Location.where("cast(price as text) LIKE  ? ", "%#{params[:price]}%")
+      @locations = Location.where('cast(price as text) LIKE  ? ', "%#{params[:price]}%")
     elsif params[:price].present?
-      @locations =  Location.where("cast(price as text) LIKE  ? ", "%#{params[:price]}%")
+      @locations = Location.where('cast(price as text) LIKE  ? ', "%#{params[:price]}%")
     elsif params[:city].present?
       results = Location.near(params[:city], scope).order(:distance)
       while results.empty?
@@ -26,7 +28,8 @@ class LocationsController < ApplicationController
     else
       @locations = Location.all
     end
-  end
+end
+
   def show
     @location = Location.find(params[:id])
   end

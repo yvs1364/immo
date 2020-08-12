@@ -19,13 +19,25 @@
       </div>
     </div>
 
+     <div class="row">
+     <div class="cards">
     <% @lots.each do |l| %>
   <%if l == @lots.first %>
   <div class="card-product" id="red">
-     <%= image_tag "field.jpg" %>
+        <div class="image-container">
+        <%= image_tag "field.jpg" %>
+         <div class="after">
+          <h2> <%= "Type de bien: #{l.name}" %> </h2>
+           <h2> <%= "Surface: #{l.metre} m²" %> </h2>
+            <h2> <%= "Situé à #{l.city}" %> </h2>
+            <h2> <%= "Prix: #{l.price} €" %> </h2>
+            <h2> <%= "Reférence de l'annonce:  #{l.ref}" %>
+          </div>
+        </div>
      <div class="card-product-infos">
       <h2><%= link_to "#{l.name} de #{l.metre} m²" ,  lot_path(l) %></h2>
-      <p> <%= l.city %> </p>
+      <p> <%= "Prix: #{l.price} €" %> </p>
+      <p id="p"> <%= "Situé à #{l.city}" %> </p>
        <div class="ruban">
           <h2>Exclusivité</h2>  
       </div>  
@@ -33,13 +45,25 @@
     </div>
   <%else%>
       <div class="card-product">
-           <%= image_tag "field.jpg" %>
+               <div class="image-container">
+        <%= image_tag "field.jpg" %>
+         <div class="after">
+          <h2> <%= "Type de bien: #{l.name}" %> </h2>
+           <h2> <%= "Surface: #{l.metre} m²" %> </h2>
+            <h2> <%= "Situé à #{l.city}" %> </h2>
+            <h2> <%= "Prix: #{l.price} €" %> </h2>
+            <h2> <%= "Reférence de l'annonce:  #{l.ref}" %>
+          </div>
+        </div>
       <div class="card-product-infos">
         <h2><%= link_to "#{l.name} de #{l.metre} m²" ,  lot_path(l) %></h2>
-        <p> <%= l.city %> </p>
+       <p id="p"> <%= "Situé à #{l.city}" %> </p>
+        <p> <%= "Prix: #{l.price} €" %> </p>
       </div>
     </div>
       <%end%>
    <% end %>
+   </div>
+   </div>
 </div>
 

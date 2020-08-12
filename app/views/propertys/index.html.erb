@@ -18,28 +18,57 @@
          <%= link_to "Estimation", estimate_path %> </strong></h1>
       </div>
     </div>
-    
-  <% @propertys.each do |p| %>
-<%if p == @propertys.first %>
- <div class="card-product" id="red">
-     <%= image_tag "house.jpg" %>
+
+     <div class="row">
+     <div class="cards">
+    <% @propertys.each do |p| %>
+
+    <%if p == @propertys.first %>
+
+    <div class="card-product" id="red">
+            <div class="image-container">
+        <%= image_tag "house.jpg" %>
+         <div class="after">
+          <h2> <%= "Type de bien: #{p.name}" %> </h2>
+           <h2> <%= "Surface: #{p.metre} m²" %> </h2>
+            <h2> <%= " Nombre de pièces: #{p.room} " %> </h2>
+            <h2> <%= "Situé à #{p.city}" %> </h2>
+            <h2> <%= "Prix: #{p.price} €" %> </h2>
+            <h2> <%= "Reférence de l'annonce:  #{p.ref}" %>
+          </div>
+        </div>
      <div class="card-product-infos">
       <h2><%= link_to "#{p.name} de #{p.metre} m²",  property_path(p) %></h2>
-      <p> <%= p.city %> </p>
+      <p> <%= "Situé à #{p.city}" %> </p>
+       <p> <%= "Prix: #{p.price} €" %> </p>
         <div class="ruban">
-                <h2>Exclusivité</h2>  
+          <h2>Exclusivité</h2>  
       </div>  
     </div>
   </div>
-  <%else%>
+      <%else%>
       <div class="card-product">
-     <%= image_tag "house.jpg" %>
-      <div class="card-product-infos">
-        <h2><%= link_to "#{p.name} de #{p.metre} m²",  property_path(p) %></h2>
-        <p> <%= p.city %> </p>
-      </div>
-    </div>
-      <%end%>
-   <% end %>
+            <div class="image-container">
+        <%= image_tag "house.jpg" %>
+         <div class="after">
+          <h2> <%= "Type de bien: #{p.name}" %> </h2>
+           <h2> <%= "Surface: #{p.metre} m²" %> </h2>
+            <h2> <%= " Nombre de pièces: #{p.room} " %> </h2>
+            <h2> <%= "Situé à #{p.city}" %> </h2>
+            <h2> <%= "Prix: #{p.price} €" %> </h2>
+            <h2> <%= "Reférence de l'annonce:  #{p.ref}" %>
+          </div>
+        </div>
+          <div class="card-product-infos">
+            <h2><%= link_to "#{p.name} de #{p.metre} m²",  property_path(p) %></h2>
+             <p> <%= "Situé à #{p.city}" %> </p>
+              <p> <%= "Prix: #{p.price} €" %> </p>
+            </div>
+            </div>
+            <%end%>
+          <% end %>
+          </div>
+         </div>
+   </div>
 </div>
 

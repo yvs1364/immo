@@ -19,13 +19,26 @@
       </div>
     </div>
 
+     <div class="row">
+     <div class="cards">
     <% @locations.each do |locate| %>
 <%if locate == @locations.first %>
  <div class="card-product" id="red">
-     <%= image_tag "locate.jpg" %>
+      <div class="image-container">
+        <%= image_tag "locate.jpg" %>
+         <div class="after">
+          <h2> <%= "Type de bien: #{locate.name}" %> </h2>
+           <h2> <%= "Surface: #{locate.metre} m²" %> </h2>
+            <h2> <%= " Nombre de pièces: #{locate.room} " %> </h2>
+            <h2> <%= "Situé à #{locate.city}" %> </h2>
+            <h2> <%= "Prix: #{locate.price} €" %> </h2>
+            <h2> <%= "Reférence de l'annonce:  #{locate.ref}" %>
+          </div>
+        </div>
      <div class="card-product-infos">
       <h2><%= link_to "#{locate.name} de #{locate.metre} m²",  location_path(locate) %></h2>
-      <p> <%= locate.city %> </p>
+      <p id="p"> <%= "Situé à #{locate.city}" %> </p>
+       <p> <%= "Prix: #{locate.price} €" %> </p>
         <div class="ruban">
           <h2>Exclusivité</h2>  
       </div>  
@@ -33,13 +46,26 @@
   </div>
   <%else%>
       <div class="card-product">
-     <%= image_tag "locate.jpg" %>
+      <div class="image-container">
+        <%= image_tag "locate.jpg" %>
+         <div class="after">
+          <h2> <%= "Type de bien: #{locate.name}" %> </h2>
+           <h2> <%= "Surface: #{locate.metre} m²" %> </h2>
+            <h2> <%= " Nombre de pièces: #{locate.room} " %> </h2>
+            <h2> <%= "Situé à #{locate.city}" %> </h2>
+            <h2> <%= "Prix: #{locate.price} €" %> </h2>
+            <h2> <%= "Reférence de l'annonce:  #{locate.ref}" %>
+          </div>
+        </div>
       <div class="card-product-infos">
         <h2><%= link_to "#{locate.name} de #{locate.metre} m²",  location_path(locate) %></h2>
-        <p> <%= locate.city %> </p>
+        <p id="p"> <%= "Situé à #{locate.city}" %> </p>
+         <p> <%= "Prix: #{locate.price} €" %> </p>
       </div>
     </div>
       <%end%>
    <% end %>
+   </div>
+   </div>
 </div>
 

@@ -15,16 +15,16 @@ Lot.destroy_all
 
 10.times do
   Actuality.create!(
-  name: %w[title1 title2 title3 title4 title5 title6 title7 title8 title9 title10].sample,
-  texte: "Ceci est un texte."
-)
+    name: %w[title1 title2 title3 title4 title5 title6 title7 title8 title9 title10].sample,
+    texte: 'Ceci est un texte.'
+  )
 end
 4.times do
   Nouvelle.create!(
     name: %w[title1 title2 title3 title4 title5 title6 title7 title8 title9 title10].sample,
-    texte: "Ceci est un texte."
+    texte: 'Ceci est un texte.'
   )
-  end
+end
 
 15.times do
   Property.create!(
@@ -50,10 +50,10 @@ end
 
 15.times do
   Lot.create!(
-    name: "Terrain",
+    name: 'Terrain',
     city: %w[Marseille Pau Grans].sample,
-    metre: rand(1000...10000),
-    price: rand(10000...200000),
+    metre: rand(1000...10_000),
+    price: rand(10_000...200_000),
     ref: rand(1101...1150)
   )
 end

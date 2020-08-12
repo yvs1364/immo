@@ -4,7 +4,7 @@ body{
 
 .card-product {
     overflow: hidden;
-    height: 150px;
+    height: 350px;
     background: white;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
     display: flex;
@@ -14,8 +14,10 @@ body{
   
   .card-product img {
     height: 100%;
-    width: 150px;
+    width: 350px;
     object-fit: cover;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
   }
   
   .card-product h2 {
@@ -26,7 +28,7 @@ body{
   }
   
   .card-product p {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.4;
     opacity: .7;
     margin-bottom: 0;
@@ -37,3 +39,44 @@ body{
   .card-product .card-product-infos {
     padding: 16px;
   }
+
+  .cards{
+    margin: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px; 
+  }
+
+  @media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
