@@ -1,4 +1,4 @@
-    <div class="container-fluid">
+<div class="container-fluid">
      <div class="banner">
      <div class="container">
         <h5><strong><%= link_to "Faire une recherche ", propertys_path %></strong></h5>
@@ -8,9 +8,10 @@
 </div>
     <% @nouvelles.each do |n| %>
   <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <%= image_tag "article.jpg" %>
      <div class="card-product-infos">
       <h2> <%= link_to n.name,  nouvelle_path(n) %> </h2>
+      <p id="pactualitie"> <%= n.texte%>
     </div>
   </div>
      <% end %>

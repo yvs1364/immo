@@ -1,5 +1,7 @@
-<h5><%= link_to "Retour", nouvelles_path %> </h5>
-<div class="container" id="cadre">
-<h1 id="aligne"> <%= @nouvelle.name %> <h1>
-<p id="texte"> <%= @nouvelle.texte %> </p>
-</div>
+<body id="body-contact">
+    <h5><%= link_to "Retour", nouvelles_path,  id: "back"  %> </h5>
+    <div class="container" id="cadre">
+        <h1 id="aligne"> <%= @nouvelle.name %> <h1>
+        <p id="texte"> <%= @nouvelle.texte %> </p>
+    </div>
+</body>
