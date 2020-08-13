@@ -1,81 +1,91 @@
 .banner {
-    background-size: cover;
-    background-position: center;
-    padding: 12%;
-    position: relative;
-    background-image: url(asset-path('house_snow.jpg'));
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
-    margin-bottom: 10px;
-  }
-  .banner h1 {
-    font-family: 'Montserrat',sans-serif;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 32px;
-    font-weight: bold;
-    position: absolute;
-    margin-top: 9%;
-    margin-left: 10%;
-  }
-  .banner h2 {
-    font-family: 'Montserrat',sans-serif;
-    position: absolute;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 38px;
-    font-weight: bold;
-    margin-left: 10%;
-  }
-  .banner h3 {
-    font-family: 'Montserrat',sans-serif;
-    margin-top: 10px;
-    margin-right: 10px;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 32px;
-    font-weight: bold;
-    position:absolute;
-    top:0;
-    right:0;
-  }
-  .banner h5 {
-    font-family: 'Montserrat',sans-serif;
-    margin-top: 10px;
-    margin-left: 10px;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 26px;
-    font-weight: bold;
-    position:absolute;
-    top:0;
-    left:0;
-  }
-  #punch{
-    font-family: 'Montserrat',sans-serif;
-    position: absolute;
-    color: white !important;
-    opacity: 1 !important;
-    font-weight: bold;
-    margin-top: 25px;
-    margin-left: 10%;
-  }
-  .banner p {
-    font-family: 'Montserrat',sans-serif;
-    font-size: 20px;
-    color: white;
-    opacity: .7;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  }
-  .banner a {
-    font-family: 'Montserrat',sans-serif;
-    color: white;
-    display: inline;
-  }
-  .banner a:hover{
-    font-family: 'Montserrat',sans-serif;
-    text-decoration: none !important;
-    color:rgba(255,255,255, 0.9);
-  }
+  background-size: cover;
+  background-position: center;
+  padding: 12%;
+  position: relative;
+  background-image: url(asset-path('house_snow.jpg'));
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
+  margin-bottom: 10px;
+}
+.banner h1 {
+  font-family: 'Montserrat',sans-serif;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 9%;
+  margin-left: 10%;
+}
+.banner h2 {
+  font-family: 'Montserrat',sans-serif;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 38px;
+  font-weight: bold;
+  margin-left: 17%;
+  height: 120px;
+}
+.banner h3 {
+  font-family: 'Montserrat',sans-serif;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+  position:absolute;
+  top:0;
+  right:0;
+}
+.banner h4 {
+  color: white;
+  font-size: 5rem;
+  top: 0;
+  left: 0;
+  position:absolute;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.banner h5 {
+  font-family: 'Montserrat',sans-serif;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 26px;
+  font-weight: bold;
+  position:absolute;
+  top:0;
+  left:0;
+}
+#punch{
+  font-family: 'Montserrat',sans-serif;
+  position: absolute;
+  color: white !important;
+  opacity: 1 !important;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-left: 10%;
+}
+.banner p {
+  font-family: 'Montserrat',sans-serif;
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+.banner a {
+  font-family: 'Montserrat',sans-serif;
+  color: white;
+  display: inline;
+  padding-left: 25px;
+}
+.banner a:hover{
+  font-family: 'Montserrat',sans-serif;
+  text-decoration: none !important;
+  color:rgba(255,255,255, 0.9);
+}
 .banner .btn{
   font-family: 'Montserrat',sans-serif;
   position: absolute;
@@ -83,8 +93,23 @@
 }
 .search {
   margin-left: 10%;
-  margin-top: 2% !important;
- position: absolute !important;
- width: 30%;
- padding: 12px;
+  margin-top: -4% !important;
+  position: absolute !important;
+  width: 30%;
+  padding: 12px;
 }
+#asearch{
+  padding-left: 10px;
+}
+
+// @media screen and (min-width: 601px) {
+//   .banner h1 {
+//     font-size: 32px;
+//   }
+// }
+
+// @media screen and (max-width: 600px) {
+//   .banner h1 {
+//     font-size: 18px;
+//   }
+// }

@@ -1,71 +1,59 @@
 <div class="container-fluid">
-     <div class="banner">
-       <div class="container">
-       <h3><strong><%= link_to "Blog", actualitys_path %></strong> <strong><%= link_to "Contact", contact_path %></strong></h3>
-        <h2>Trouvez votre chez-vous </h2>
-  <div class="search">
-          <%= form_tag locations_path, method: :get do %>
-            <%= text_field_tag :city, params[:city],
-             class: "form-control", id: "city", placeholder: "Où voulez-vous vivre?"  %>
-              <%= text_field_tag :price, params[:price],
-             class: "form-control", id: "price", placeholder: "Prix max"  %>
-           <%= submit_tag "Search", class: "btn btn-primary" %>
-         <% end %>
-     </div>
-        <h1> <strong><%= link_to "Achat", propertys_path %>
-         <%= link_to "Location", locations_path, {:style=>'color: rgba(255,255,255, 0.8);'}%>
-         <%= link_to "Terrain", lots_path %> 
-         <%= link_to "Estimation", estimate_path %> </strong> </h1>
+ <div class="banner">
+   <div class="container">
+     <h3><strong><%= link_to "Blog", actualitys_path %></strong> <strong><%= link_to "Contact", contact_path %></strong></h3>
+     <h2>Trouvez votre chez-vous </h2>
+     <h4>IMMO +</h4>
+     <div class="search">
+      <%= form_tag @locations_path, method: :get do %>
+      <%= text_field_tag :city, params[:city],
+      class: "form-control", id: "city", placeholder: "Où voulez-vous vivre?"  %>
+      <div class="row no-gutter">
+        <div class="col-lg-6">
+          <%= text_field_tag :price_min, params[:price_min],
+          class: "form-control", id: "price", placeholder: "Prix min"  %>
+        </div>
+        <div class="col-lg-6">
+          <%= text_field_tag :price_max, params[:price_max],
+          class: "form-control", id: "price", placeholder: "Prix max"  %>
+        </div>
       </div>
-    </div>
+      <%= text_field_tag :room, params[:room],
+      class: "form-control", id: "room", placeholder: "Nombre de pièces min"  %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
+    </div>%>
+    <h1> <strong><%= link_to "Achat", propertys_path %>
+     <%= link_to "Location", locations_path, {:style=>'color: rgba(255,255,255, 0.8);'}%>
+     <%= link_to "Terrain", lots_path %>
+     <%= link_to "Estimation", estimate_path %> </strong> </h1>
+   </div>
+ </div>
 
-     <div class="row">
-     <div class="cards">
+ <div class="row">
+   <div class="cards">
     <% @locations.each do |locate| %>
-<%if locate == @locations.first %>
- <div class="card-product" id="red">
-      <div class="image-container">
-        <%= image_tag "locate.jpg" %>
-         <div class="after">
-          <h2> <%= "Type de bien: #{locate.name}" %> </h2>
-           <h2> <%= "Surface: #{locate.metre} m²" %> </h2>
+      <div class="card-product">
+        <div class="image-container">
+          <%= image_tag "locate.jpg" %>
+          <div class="after">
+            <h2> <%= "Type de bien: #{locate.name}" %> </h2>
+            <h2> <%= "Surface: #{locate.metre} m²" %> </h2>
             <h2> <%= " Nombre de pièces: #{locate.room} " %> </h2>
             <h2> <%= "Situé à #{locate.city}" %> </h2>
             <h2> <%= "Prix: #{locate.price} €" %> </h2>
             <h2> <%= "Reférence de l'annonce:  #{locate.ref}" %>
+            </div>
+          </div>
+          <div class="card-product-infos">
+            <h2><%= "#{locate.name} de #{locate.metre} m²" %></h2>
+            <p id="p"> <%= "Situé à #{locate.city}" %> </p>
+            <p> <%= "Prix: #{locate.price} €" %> </p>
+            <h3><%= link_to "Voir +",  location_path(locate) %></h3>
           </div>
         </div>
-     <div class="card-product-infos">
-      <h2><%= link_to "#{locate.name} de #{locate.metre} m²",  location_path(locate) %></h2>
-      <p id="p"> <%= "Situé à #{locate.city}" %> </p>
-       <p> <%= "Prix: #{locate.price} €" %> </p>
-        <div class="ruban">
-          <h2>Exclusivité</h2>  
-      </div>  
+        <% end %>
+      </div>
     </div>
   </div>
-  <%else%>
-      <div class="card-product">
-      <div class="image-container">
-        <%= image_tag "locate.jpg" %>
-         <div class="after">
-          <h2> <%= "Type de bien: #{locate.name}" %> </h2>
-           <h2> <%= "Surface: #{locate.metre} m²" %> </h2>
-            <h2> <%= " Nombre de pièces: #{locate.room} " %> </h2>
-            <h2> <%= "Situé à #{locate.city}" %> </h2>
-            <h2> <%= "Prix: #{locate.price} €" %> </h2>
-            <h2> <%= "Reférence de l'annonce:  #{locate.ref}" %>
-          </div>
-        </div>
-      <div class="card-product-infos">
-        <h2><%= link_to "#{locate.name} de #{locate.metre} m²",  location_path(locate) %></h2>
-        <p id="p"> <%= "Situé à #{locate.city}" %> </p>
-         <p> <%= "Prix: #{locate.price} €" %> </p>
-      </div>
-    </div>
-      <%end%>
-   <% end %>
-   </div>
-   </div>
-</div>
 

@@ -1,18 +1,20 @@
 <div class="container-fluid">
-     <div class="banner">
-     <div class="container">
-        <h5><strong><%= link_to "Faire une recherche ", propertys_path %></strong></h5>
-         <h3><strong><%= link_to "Blog", blog_path %></strong> <strong><%= link_to "Contact", contact_path %></strong></h3>
-        <h1> <strong><%= link_to "Actualité", actualitys_path, {:style=>'color: rgba(255,255,255, 0.8);'} %> <%= link_to "Nouveauté", nouvelles_path %></strong> </h1>
-     </div>
+ <div class="banner">
+   <div class="container">
+    <h5><strong><%= link_to "Faire une recherche ", propertys_path, id: "asearch" %></strong></h5>
+    <h3><strong><%= link_to "Blog", blog_path %></strong> <strong><%= link_to "Contact", contact_path %></strong></h3>
+    <h1> <strong><%= link_to "Actualité", actualitys_path, {:style=>'color: rgba(255,255,255, 0.8);'} %> <%= link_to "Nouveauté", nouvelles_path %></strong> </h1>
+    <h4>IMMO +</h4>
+  </div>
 </div>
-    <% @actualitys.each do |a| %>
-  <div class="card-product">
+<% @actualitys.each do |a| %>
+<div class="card-product">
   <%= image_tag "article.jpg" %>
-     <div class="card-product-infos">
-          <h2> <%= link_to a.name,  actuality_path(a) %> </h2>
-          <p id="pactualitie"> <%= a.texte%>
+  <div class="card-product-infos">
+    <h2> <%= a.name %> </h2>
+    <p id="pactualitie"> <%= a.texte%>
+      <h3><%= link_to "Voir +" , actuality_path(a) %></h3>
     </div>
   </div>
-     <% end %>
+  <% end %>
 </div>

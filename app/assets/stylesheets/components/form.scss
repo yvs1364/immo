@@ -1,0 +1,11 @@
+.no-gutter {
+  margin-right: 0;
+  margin-left: 0;
+  widows: 100%;
+}
+
+.no-gutter > [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+}

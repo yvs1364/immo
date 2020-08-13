@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class Property < ApplicationRecord
+  scope :min_price, ->(min) { where('cast(price as text) > ?', min) }
+  scope :max_price, ->(max) { where('cast(price as text) < ?', max) }
+  scope :min_room, ->(min) { where('cast(room as text) > ?', min) }
   validates :name, presence: true
   validates :room, presence: true
   validates :metre, presence: true

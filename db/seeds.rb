@@ -29,11 +29,11 @@ Lot.destroy_all
     Phasellus gravida nisi eget augue porta, sit amet rhoncus erat dapibus. Aenean tristique ex non tempus posuere. Aenean posuere, tortor sit amet vestibulum scelerisque, mauris arcu sollicitudin massa, non molestie mi mauris sit amet lacus. Vivamus lacinia luctus odio, vitae facilisis magna bibendum quis.
     Phasellus at cursus elit, non vestibulum neque. Sed hendrerit facilisis libero, in vulputate dolor blandit non. Pellentesque libero est, luctus in accumsan eget, vestibulum sed purus. Cras molestie eleifend risus, a faucibus lectus pharetra at.
     Cras varius rutrum libero non faucibus.
-    Sed mauris sapien, feugiat ac urna nec, ultricies iaculis magna. Mauris sed quam magna. Praesent ut urna est. Vivamus commodo condimentum libero, eleifend tincidunt enim egestas sed. Aliquam ullamcorper fermentum enim, et suscipit diam ornare sed. 
+    Sed mauris sapien, feugiat ac urna nec, ultricies iaculis magna. Mauris sed quam magna. Praesent ut urna est. Vivamus commodo condimentum libero, eleifend tincidunt enim egestas sed. Aliquam ullamcorper fermentum enim, et suscipit diam ornare sed.
     Proin finibus, nisl vel suscipit luctus, quam orci euismod nunc, vel venenatis sem eros id sem. Vestibulum aliquet pellentesque diam eget rhoncus.
     Proin sed orci cursus, aliquet libero quis, tempus ligula. Phasellus volutpat nunc in ante feugiat, vel imperdiet nibh posuere.
-    Maecenas sed arcu sit amet ex luctus faucibus. Phasellus ac interdum massa, scelerisque cursus ante. 
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nunc orci, feugiat in sem quis, cursus congue tellus. Sed id suscipit lacus. 
+    Maecenas sed arcu sit amet ex luctus faucibus. Phasellus ac interdum massa, scelerisque cursus ante.
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nunc orci, feugiat in sem quis, cursus congue tellus. Sed id suscipit lacus.
     Phasellus aliquet facilisis ex, ut lobortis neque tincidunt id. Cras semper libero neque, ac tincidunt nunc molestie eget. Fusce efficitur elementum sapien, in efficitur ligula placerat a.
     Donec nec nisi lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.'
   )
@@ -54,17 +54,17 @@ end
     Phasellus gravida nisi eget augue porta, sit amet rhoncus erat dapibus. Aenean tristique ex non tempus posuere. Aenean posuere, tortor sit amet vestibulum scelerisque, mauris arcu sollicitudin massa, non molestie mi mauris sit amet lacus. Vivamus lacinia luctus odio, vitae facilisis magna bibendum quis.
     Phasellus at cursus elit, non vestibulum neque. Sed hendrerit facilisis libero, in vulputate dolor blandit non. Pellentesque libero est, luctus in accumsan eget, vestibulum sed purus. Cras molestie eleifend risus, a faucibus lectus pharetra at.
     Cras varius rutrum libero non faucibus.
-    Sed mauris sapien, feugiat ac urna nec, ultricies iaculis magna. Mauris sed quam magna. Praesent ut urna est. Vivamus commodo condimentum libero, eleifend tincidunt enim egestas sed. Aliquam ullamcorper fermentum enim, et suscipit diam ornare sed. 
+    Sed mauris sapien, feugiat ac urna nec, ultricies iaculis magna. Mauris sed quam magna. Praesent ut urna est. Vivamus commodo condimentum libero, eleifend tincidunt enim egestas sed. Aliquam ullamcorper fermentum enim, et suscipit diam ornare sed.
     Proin finibus, nisl vel suscipit luctus, quam orci euismod nunc, vel venenatis sem eros id sem. Vestibulum aliquet pellentesque diam eget rhoncus.
     Proin sed orci cursus, aliquet libero quis, tempus ligula. Phasellus volutpat nunc in ante feugiat, vel imperdiet nibh posuere.
-    Maecenas sed arcu sit amet ex luctus faucibus. Phasellus ac interdum massa, scelerisque cursus ante. 
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nunc orci, feugiat in sem quis, cursus congue tellus. Sed id suscipit lacus. 
+    Maecenas sed arcu sit amet ex luctus faucibus. Phasellus ac interdum massa, scelerisque cursus ante.
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nunc orci, feugiat in sem quis, cursus congue tellus. Sed id suscipit lacus.
     Phasellus aliquet facilisis ex, ut lobortis neque tincidunt id. Cras semper libero neque, ac tincidunt nunc molestie eget. Fusce efficitur elementum sapien, in efficitur ligula placerat a.
     Donec nec nisi lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.'
   )
 end
 
-15.times do
+20.times do
   Property.create!(
     name: %w[Maison Appartement].sample,
     room: rand(1...9),
@@ -75,7 +75,7 @@ end
   )
 end
 
-15.times do
+20.times do
   Location.create!(
     name: %w[Maison Appartement].sample,
     room: rand(1...9),
@@ -86,7 +86,7 @@ end
   )
 end
 
-15.times do
+20.times do
   Lot.create!(
     name: 'Terrain',
     city: %w[Marseille Pau Grans Artouste].sample,

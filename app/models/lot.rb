@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Lot < ApplicationRecord
+  scope :min_price, ->(min) { where('cast(price as text) > ?', min) }
+  scope :max_price, ->(max) { where('cast(price as text) < ?', max) }
   validates :name, presence: true
   validates :metre, presence: true
   validates :city, presence: true
