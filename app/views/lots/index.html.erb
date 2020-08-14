@@ -47,7 +47,9 @@
           <h2><%="#{l.name} de #{l.metre} m²" %></h2>
           <p id="p"> <%= "Situé à #{l.city}" %> </p>
           <p> <%= "Prix: #{l.price} €" %> </p>
-          <h3><%= link_to "Voir +" ,  lot_path(l) %></h3>
+                      <h3><%= link_to   lot_path(l) do %> 
+                Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
+                <% end %>
         </div>
       </div>
       <% end %>
