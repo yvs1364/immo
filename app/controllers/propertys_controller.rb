@@ -32,13 +32,6 @@ class PropertysController < ApplicationController
     else
       @propertys = Property.all
     end
-
-    # @markers = @propertys.map do |property|
-    #   {
-    #     lat: property.latitude,
-    #     lng: property.longitude
-    #   }
-    # end
   end
 
   def show

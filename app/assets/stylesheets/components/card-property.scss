@@ -36,7 +36,16 @@ body{
     margin-top: 8px;
     font-family: 'Montserrat',sans-serif;
   }
-
+  .card-product-infos a{
+    margin-left: 35px;
+    text-decoration: none;
+    color: #59ABE3;
+    font-weight: bold
+  }
+  .card-product-infos a:hover{
+    text-decoration: none;
+    color: rgba(89,171,227,.7)
+  }
   .card-product .card-product-infos {
     padding: 16px;
   }
