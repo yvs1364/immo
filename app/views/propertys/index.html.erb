@@ -1,62 +1,84 @@
 <div class="container-fluid">
- <div class="banner">
-   <div class="container">
-     <h3><strong><%= link_to "Blog", actualitys_path %></strong> <strong><%= link_to "Contact", contact_path %></strong></h3>
-     <h2>Trouvez votre chez-vous </h2>
-     <h4>IMMO +</h4>
-     <div class="search">
-      <%= form_tag @propertys_path, method: :get do %>
-      <%= text_field_tag :city, params[:city],
-      class: "form-control", id: "city", placeholder: "Où voulez-vous vivre?"  %>
-      <div class="row no-gutter">
-        <div class="col-lg-6">
-          <%= text_field_tag :price_min, params[:price_min],
-          class: "form-control", id: "price", placeholder: "Prix min"  %>
-        </div>
-        <div class="col-lg-6">
-          <%= text_field_tag :price_max, params[:price_max],
-          class: "form-control", id: "price", placeholder: "Prix max"  %>
-        </div>
-      </div>
-      <%= text_field_tag :room, params[:room],
-      class: "form-control", id: "room", placeholder: "Nombre de pièces min"  %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
-      <% end %>
-    </div>
-    <h1> <strong><%= link_to "Achat", propertys_path, {:style=>'color: rgba(255,255,255, 0.8);'} %>
-     <%= link_to "Location", locations_path %>
-     <%= link_to "Terrain", lots_path %>
-     <%= link_to "Estimation", estimate_path %> </strong></h1>
-   </div>
- </div>
+ <div id="Carousel" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-content">
+  <h3><strong><%= link_to "Blog", actualitys_path %></strong> <strong><%= link_to "Contact", contact_path %></strong></h3>
 
- <div class="row">
-   <div class="cards">
-    <% @propertys.each do |p| %>
-      <div class="card-product">
-        <div class="image-container">
-          <%= image_tag "house.jpg" %>
-          <div class="after">
-            <h2> <%= "Type de bien: #{p.name}" %> </h2>
-            <h2> <%= "Surface: #{p.metre} m²" %> </h2>
-            <h2> <%= " Nombre de pièces: #{p.room} " %> </h2>
-            <h2> <%= "Situé à #{p.city}" %> </h2>
-            <h2> <%= "Prix: #{p.price} €" %> </h2>
-            <h2> <%= "Reférence de l'annonce:  #{p.ref}" %>
-            </div>
-          </div>
-          <div class="card-product-infos">
-            <h2><%= "#{p.name} de #{p.metre} m²"%> </h2>
-            <p> <%= "Situé à #{p.city}" %> </p>
-            <p> <%= "Prix: #{p.price} €" %> </p>
-            <h3><%= link_to   property_path(p) do %> 
-                Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
-                <% end %>
-            </h3>
-          </div>
-        </div>
-        <% end %>
-      </div>
+ <h4>IMMO +</h4>
+ <div class="search">
+   <h2>Trouvez votre chez-vous </h2>
+  <%= form_tag @propertys_path, method: :get do %>
+  <%= text_field_tag :city, params[:city],
+  class: "form-control", id: "city", placeholder: "Où voulez-vous vivre?"  %>
+  <div class="row no-gutter">
+    <div class="col-lg-6">
+      <%= text_field_tag :price_min, params[:price_min],
+      class: "form-control", id: "pricemin", placeholder: "Prix min"  %>
+    </div>
+    <div class="col-lg-6">
+      <%= text_field_tag :price_max, params[:price_max],
+      class: "form-control", id: "pricemax", placeholder: "Prix max"  %>
     </div>
   </div>
+  <%= text_field_tag :room, params[:room],
+  class: "form-control", id: "room", placeholder: "Nombre de pièces min"  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+<h1> <strong><%= link_to "Achat", propertys_path, {:style=>'color: rgba(255,255,255, 0.8);'} %>
+ <%= link_to "Location", locations_path %>
+ <%= link_to "Terrain", lots_path %>
+ <%= link_to "Estimation", estimate_path %> </strong></h1>
+ </div>
+    <div class="item active">
+     <%= image_tag "article.jpg", class: "d-block w-100", alt: "Carrousel slide 1"%>
+   </div>
+   <div class="item">
+    <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 2"%>
+  </div>
+  <div class="item">
+    <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 3" %>
+  </div>
+
+</div>
+</div>
+
+<div class="row">
+ <div class="cards">
+  <% @propertys.each do |p| %>
+  <div class="card-product">
+    <div class="image-container">
+      <%= image_tag "house.jpg" %>
+      <div class="after">
+        <h2> <%= "Type de bien: #{p.name}" %> </h2>
+        <h2> <%= "Surface: #{p.metre} m²" %> </h2>
+        <h2> <%= " Nombre de pièces: #{p.room} " %> </h2>
+        <h2> <%= "Situé à #{p.city}" %> </h2>
+        <h2> <%= "Prix: #{p.price} €" %> </h2>
+        <h2> <%= "Reférence de l'annonce:  #{p.ref}" %>
+        </div>
+      </div>
+      <div class="card-product-infos">
+        <h2><%= "#{p.name} de #{p.metre} m²"%> </h2>
+        <p> <%= "Situé à #{p.city}" %> </p>
+        <p> <%= "Prix: #{p.price} €" %> </p>
+        <h3><%= link_to   property_path(p) do %>
+          Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
+          <% end %>
+        </h3>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.carousel').carousel({
+      interval: 4000
+    })
+  });
+</script>
+</div>
 </div>
