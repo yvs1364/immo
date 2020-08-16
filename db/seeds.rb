@@ -86,10 +86,10 @@ end
   )
 end
 
-20.times do
+1.times do
   Lot.create!(
     name: 'Terrain',
-    city: %w[Marseille Pau Grans Artouste].sample,
+    city: "76 rue carnot Pau",
     metre: rand(1000...10_000),
     price: rand(10_000...200_000),
     ref: rand(1101...1150)

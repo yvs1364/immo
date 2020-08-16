@@ -25,20 +25,28 @@
   <%= submit_tag "Search", class: "btn btn-primary" %>
   <% end %>
 </div>
-
-<h1> <strong><%= link_to "Achat", propertys_path, {:style=>'color: rgba(255,255,255, 0.8);'} %>
- <%= link_to "Location", locations_path %>
- <%= link_to "Terrain", lots_path %>
- <%= link_to "Estimation", estimate_path %> </strong></h1>
+   <div class="button-effect">
+<h1>
+ <%= link_to "Achat", propertys_path,class: "effect effect-5" , id: "linkeffect" %>
+ <%= link_to "Location", locations_path, class: "effect effect-5"  %>
+ <%= link_to "Terrain", lots_path, class: "effect effect-5"  %>
+ <%= link_to "Estimation", estimate_path, class: "effect effect-5"  %></h1>
  </div>
+</div>
     <div class="item active">
-     <%= image_tag "article.jpg", class: "d-block w-100", alt: "Carrousel slide 1"%>
+     <%= image_tag "house_fond4", class: "d-block w-100", alt: "Carrousel slide 1", crop: :fill%>
    </div>
    <div class="item">
-    <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 2"%>
+    <%= image_tag "house_fond3.jpg", class: "d-block w-100", alt: "Carrousel slide 2", crop: :fill%>
   </div>
   <div class="item">
-    <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 3" %>
+    <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 3", crop: :fill %>
+  </div>
+ <div class="item active">
+     <%= image_tag "house_fond2", class: "d-block w-100", alt: "Carrousel slide 4", crop: :fill%>
+   </div>
+   <div class="item">
+    <%= image_tag "house_fond5.jpg", class: "d-block w-100", alt: "Carrousel slide 5", crop: :fill%>
   </div>
 
 </div>

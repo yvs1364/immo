@@ -7,6 +7,7 @@
 }
 .carousel-inner>.item>img{
   background-size: cover;
+  height: 50em !important;
 }
 
 .carousel-content {
@@ -17,19 +18,8 @@
   color: white;
   text-shadow: 0 1px 2px rgba(0,0,0,.6);
 }
-@keyframes slidy {
-  0% { left: 0%; }
-  20% { left: 0%; }
-  25% { left: -100%; }
-  45% { left: -100%; }
-  50% { left: -200%; }
-  70% { left: -200%; }
-  75% { left: -300%; }
-  95% { left: -300%; }
-  100% { left: -400%; }
-}
 .carousel-content h1 {
-  font-family: 'Montserrat',sans-serif;
+  font-family: 'roboto',sans-serif;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
@@ -39,13 +29,13 @@
   margin-right: 150px;
 }
 .carousel-content h2 {
-  font-family: 'Montserrat',sans-serif;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 38px;
-  font-weight: bold;
-  text-align: center;
-  width: 12em;
+ font-family: 'roboto',sans-serif;
+ color: white;
+ text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+ font-size: 42px;
+ font-weight: bold;
+ text-align: center;
+ width: 20em;
 }
 .carousel-content h3 {
   font-family: 'Montserrat',sans-serif;
@@ -65,13 +55,13 @@
   top: 0;
   left: 0;
   position:absolute;
-  margin-top: 30px;
+  margin-top: 5%;
   margin-left: 10px;
 }
 .carousel-content h5 {
   font-family: 'Montserrat',sans-serif;
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 1px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 26px;
@@ -100,18 +90,14 @@
   font-family: 'Montserrat',sans-serif;
   color: white;
   display: inline;
-  padding-left: 25px;
+  padding-left: 10px;
 }
 .carousel-content a:hover{
   font-family: 'Montserrat',sans-serif;
   text-decoration: none !important;
   color:rgba(255,255,255, 0.9);
 }
-.carousel-content .btn{
-  font-family: 'Montserrat',sans-serif;
-  position: absolute;
-  width: 80px !important;
-}
+
 .search {
   margin-left: 30%;
   margin-top: 10% !important;
@@ -126,4 +112,33 @@
 }
 #pricemax{
   width: 269px;
+}
+.estimate {
+  margin-left: 25%;
+  margin-bottom: -18%;
+  margin-top: 15%;
+}
+.actunew{
+  margin-left: 25%;
+  margin-bottom: -17%;
+  margin-top: 11%;
+}
+.actunew h2 {
+ font-family: 'roboto',sans-serif;
+ color: white;
+ text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+ font-size: 5em;
+ font-weight: bold;
+ text-align: center;
+ width: 10em;
+}
+.actunew p{
+  font-family: 'Montserrat',sans-serif;
+  position: absolute;
+  color: white !important;
+  opacity: 1 !important;
+  font-weight: bold;
+  margin-top: 10px !important;
+  margin-left: 10%;
+  font-size: 2em;
 }

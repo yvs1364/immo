@@ -6,3 +6,36 @@
      </div>
 </div>
 </div>
+
+<div class="container-fluid">
+   <div id="Carousel" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-content">
+        <h3><strong><%= link_to "Blog", actualitys_path %></strong> <strong><%= link_to "Contact", contact_path %></strong></h3>
+
+        <h4>IMMO +</h4>
+         <div class="estimate">
+        <h2>Vous ne vous sentez plus chez vous ?</h2>
+        <p id="punch">laissez-nous vendre pour vous !<p>
+        </div>
+
+          <div class="button-effect">
+            <h1>
+             <%= link_to "Achat", propertys_path,class: "effect effect-5" %>
+             <%= link_to "Location", locations_path, class: "effect effect-5" %>
+             <%= link_to "Terrain", lots_path, class: "effect effect-5"%>
+             <%= link_to "Estimation", estimate_path, class: "effect effect-5", id: "linkeffect"%></h1>
+           </div>
+         </div>
+         <div class="item active">
+           <%= image_tag "article.jpg", class: "d-block w-100", alt: "Carrousel slide 1", crop: :fill%>
+         </div>
+         <div class="item">
+          <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 2", crop: :fill%>
+        </div>
+        <div class="item">
+          <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 3", crop: :fill %>
+        </div>
+
+      </div>
+    </div>
