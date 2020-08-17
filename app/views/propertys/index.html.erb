@@ -74,7 +74,7 @@
       <div class="card-product-infos">
         <h2><%= "#{p.name} de #{p.metre} m²"%> </h2>
         <p> <%= "Situé à #{p.city}" %> </p>
-        <p> <%= "Prix: #{p.price.to_s.in_groups_of(3)} €" %> </p>
+        <p id="prix"> <%= "Prix: #{p.price.to_s.in_groups_of(3)} €" %> </p>
         <h3><%= link_to   property_path(p) do %>
           Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
           <% end %>

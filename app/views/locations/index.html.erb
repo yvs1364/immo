@@ -49,7 +49,7 @@
   <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 3", crop: :fill %>
 </div>
 <div class="item">
-  <%= image_tag "house_fond5.jpg", class: "d-block w-100", alt: "Carrousel slide 5", crop: :fill%>
+    <%= image_tag "housefd.jpg", class: "d-block w-100", alt: "Carrousel slide 5", crop: :fill%>
 </div>
 
 </div>
@@ -72,8 +72,8 @@
       </div>
       <div class="card-product-infos">
         <h2><%= "#{locate.name} de #{locate.metre} m²" %></h2>
-        <p id="p"> <%= "Situé à #{locate.city}" %> </p>
-        <p> <%= "Prix: #{locate.price} €" %> </p>
+        <p> <%= "Situé à #{locate.city}" %> </p>
+        <p id="prix"> <%= "Prix: #{locate.price} €" %> </p>
         <h3><%= link_to   location_path(locate) do %>
           Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
           <% end %>

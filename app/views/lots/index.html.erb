@@ -71,8 +71,8 @@
     </div>
     <div class="card-product-infos">
       <h2><%="#{l.name} de #{l.metre} m²" %></h2>
-      <p id="p"> <%= "Situé à #{l.city}" %> </p>
-      <p> <%= "Prix: #{l.price.to_s.in_groups_of(3)} €" %> </p>
+      <p> <%= "Situé à #{l.city}" %> </p>
+      <p id="prix"> <%= "Prix: #{l.price.to_s.in_groups_of(3)} €" %> </p>
       <h3><%= link_to   lot_path(l) do %>
         Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
         <% end %>
