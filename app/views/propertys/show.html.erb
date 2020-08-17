@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <h5 class="back"><%= link_to "Retour", propertys_path %> </h5>
+  <h5><%= link_to "Retour", propertys_path, id: "back-show" %> </h5>
 </div>
 <div class="container">
   <div class="row">
@@ -73,11 +73,18 @@
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <% @markers = { lat: @property.latitude, lng: @property.longitude} %>
     </div>
+
   </div>
   <div class="container">
     <!--The div element for the map -->
     <div id="map-container">
       <div id="map" data-markers="<%= @markers.to_json %>"></div>
+           <div class="col-contact">
+             <%= image_tag "man.jpg",id: "avatar"%>
+            <h1>Ce bien vous plaît ?</h1>
+             <p>Contactez-nous au 07.23.12.25.39 </p>
+             <p>Ou par E-mail: immo+@mail.com</p>
+           </div>
       <script>
             //recup data from map
             const mapElement = document.getElementById("map");
