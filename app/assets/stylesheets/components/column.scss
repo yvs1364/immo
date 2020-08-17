@@ -18,11 +18,11 @@
   text-align: justify;
 }
 .col-contact{
-  height: 30em;
+  height: 40em;
   width: 25em;
   right: 0;
   position: absolute;
-  top: 25%;
+  top: 5%;
   border: 3px solid #e6e6e6;
   background: #59ABE3;
   padding: 15px;
@@ -67,4 +67,41 @@
   overflow: hidden;
   border-radius: 50%;
   object-fit: cover;
+}
+#divflex{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  width: 20%;
+}
+#divflex2{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  width: 50%;
+}
+#divflex p{
+  font-size: 1.25em;
+}
+#divflex2 p{
+  font-size: 1.25em;
+}
+
+#flexprop{
+  border: 3px solid #1e9afe;
+  background: white;
+  box-shadow: 2px 2px 15px #B1B1B1;
+  border-radius: 8px;
+}
+#flexlocate{
+  border: 3px solid #60dfcd;
+  background: white;
+  box-shadow: 2px 2px 15px #B1B1B1;
+  border-radius: 8px;
+}
+#flexlot{
+  border: 3px solid #42FCDB;
+  background: white;
+  box-shadow: 2px 2px 15px #B1B1B1;
+  border-radius: 8px;
 }

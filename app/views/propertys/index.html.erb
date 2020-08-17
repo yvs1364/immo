@@ -61,7 +61,11 @@
   <% @propertys.each do |p| %>
   <div class="card-product" id="cardprop">
     <div class="image-container">
-      <%= image_tag "house.jpg" %>
+      <% if p.name == "Maison" %>
+        <%= image_tag "house.jpg" %>
+      <% else %>
+        <%= image_tag "apartment.jpg" %>
+      <%end %>
       <div class="after">
         <h2> <%= "Type de bien: #{p.name}" %> </h2>
         <h2> <%= "Surface: #{p.metre} m²" %> </h2>

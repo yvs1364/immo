@@ -3,11 +3,16 @@
 </div>
 <div class="container">
   <div class="row">
-    <div class="col">
-      <%= image_tag "room.jpg", onclick: "openModal();currentSlide(1)", class: "hover-shadow" %>
+    <div class="d-flex justify-content-start">
+      <div id="bigimg">
+        <%= image_tag "room.jpg", onclick: "openModal();currentSlide(1)", class: "bigimg" %>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center" id="littleimg">
       <%= image_tag "room2.jpg", onclick: "openModal();currentSlide(2)", class: "hover-shadow" %>
       <%= image_tag "room3.jpg", onclick: "openModal();currentSlide(3)", class: "hover-shadow" %>
       <%= image_tag "room4.jpg", onclick: "openModal();currentSlide(4)", class: "hover-shadow" %>
+
     </div>
     <!-- The Modal/Lightbox -->
     <div id="myModal" class="modal">
@@ -60,19 +65,28 @@
      </div>
    </div>
  </div>
- <div class="col" style="border: 3px solid #78788c; background: white">
-  <p><strong>Pièces: </strong><%= @location.room %></p>
-  <p><%= @location.metre %> <strong>m²</strong></p>
-  <p><strong>Ville: </strong><%= @location.city %></p>
-  <p><strong>Prix: </strong><%= @location.price %><strong> €</strong></p>
-  <p><strong>Reférence de l'annonce: </strong><%= @location.ref %></p>
-  <p><strong>Déscription du bien: </strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
-    Integer nec erat tincidunt, dapibus metus et, ullamcorper justo.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+ <div class="d-flex justify-content-start" id="flexlocate">
+  <div id="divflex">
+    <p><%= "#{@location.name} de #{@location.metre}"%><strong> m²</strong></p>
+    <p><strong>Pièces: </strong><%= @location.room %></p>
+  </div>
+
+  <div id="divflex">
+    <p><strong>Ville: </strong><%= @location.city %></p>
+    <p><strong>Prix: </strong><%= @location.price.to_s.in_groups_of(3) %><strong> €</strong></p>
+    <p><strong>Reférence de l'annonce: </strong><%= @location.ref %></p>
+  </div>
+
+  <div id="divflex2">
+    <p><strong>Déscription du bien: </strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
+      Integer nec erat tincidunt, dapibus metus et, ullamcorper justo.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
   <% @markers = { lat: @location.latitude, lng: @location.longitude} %>
 </div>
+
 </div>
 <div class="container">
 
@@ -83,6 +97,8 @@
      <h1>Ce bien vous plaît ?</h1>
      <p>Contactez-nous au 07.23.12.25.39 </p>
      <p>Ou par E-mail: immo+@mail.com</p>
+     <p>Ou par message<input placeholder="Votre message"></input></p>
+     <button>Envoyé le message</button>
    </div>
    <script>
             //recup data from map

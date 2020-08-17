@@ -165,6 +165,8 @@ img.hover-shadow {
   transition: 0.3s;
   height: 12em;
   padding-bottom: 3px;
+  margin-right: -1px;
+  padding: 4px;
 }
 
 .hover-shadow:hover {
@@ -174,3 +176,10 @@ img.hover-shadow {
   width: 100%;
   height: auto;
 }
+.bigimg{
+  height: 35em;
+}
+#littleimg {
+  padding-top: 5px
+}
+

@@ -49,7 +49,7 @@
   <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 3", crop: :fill %>
 </div>
 <div class="item">
-    <%= image_tag "housefd.jpg", class: "d-block w-100", alt: "Carrousel slide 5", crop: :fill%>
+  <%= image_tag "housefd.jpg", class: "d-block w-100", alt: "Carrousel slide 5", crop: :fill%>
 </div>
 
 </div>
@@ -60,7 +60,12 @@
   <% @locations.each do |locate| %>
   <div class="card-product" id="cardlocate">
     <div class="image-container">
+      <% if locate.name == "Maison" %>
+      <%= image_tag "house_interior.jpg" %>
+      <% else %>
       <%= image_tag "locate.jpg" %>
+      <%end %>
+
       <div class="after">
         <h2> <%= "Type de bien: #{locate.name}" %> </h2>
         <h2> <%= "Surface: #{locate.metre} m²" %> </h2>

@@ -40,7 +40,12 @@
    border-bottom: 5px solid #FF4E00;
 }
 .list-inline{
-  margin-top: 30%;
+  margin-top: 34%;
   text-align: center;
   margin-left: 30%;
+}
+@media (min-width: 1600px) {
+  .list-inline {
+  margin-top: 30%;
+  }
 }
