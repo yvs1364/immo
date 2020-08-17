@@ -1,0 +1,46 @@
+.tabs-underlined {
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+}
+
+.tabs-underlined .tab-underlined {
+  color: white;
+  padding: 8px;
+  margin: 8px 16px;
+  opacity: .4;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 4px solid transparent;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.tabs-underlined .tab-underlined.active {
+  opacity: 1;
+  border-bottom: 5px solid #1e9afe;
+}
+#uder2.active {
+  opacity: 1;
+  border-bottom: 5px solid #60dfcd;
+}
+#uder3.active{
+  opacity: 1;
+  border-bottom: 5px solid #42FCDB;
+}
+#uder4.active{
+  opacity: 1;
+  border-bottom: 5px solid #93FB9D;
+}
+#uder5.active{
+   opacity: 1;
+   border-bottom: 5px solid #EC9F05;
+}
+#uder6.active{
+   opacity: 1;
+   border-bottom: 5px solid #FF4E00;
+}
+.list-inline{
+  margin-top: 30%;
+  text-align: center;
+  margin-left: 30%;
+}

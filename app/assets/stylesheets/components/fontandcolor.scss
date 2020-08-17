@@ -1,20 +1,24 @@
 #body-contact{
-    background:#59ABE3;
-    background-size: cover;
- }
- #color{
-    background:#59ABE3;
-    width: 100%;
-    height: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
- }
+  background-color: #60dfcd;
+  background-image: linear-gradient(315deg, #60dfcd 0%, #1e9afe 74%);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#color{
+  background:#59ABE3;
+  width: 100%;
+  height: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
- html, body {
-    height: 100%;
-  }
+html, body {
+  height: 100%;
+}
 //   h1, h2, h3, h4, h5, h5{
 //    font-family: 'Montserrat',sans-serif;
 //    color: white;

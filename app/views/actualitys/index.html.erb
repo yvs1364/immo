@@ -3,30 +3,36 @@
   <div class="carousel-inner">
     <div class="carousel-content">
      <h5><strong><%= link_to "Faire une recherche ", propertys_path %></strong></h5>
-     <h3><strong><%= link_to "Blog", blog_path %></strong> <strong><%= link_to "Contact", contact_path %></strong></h3>
+     <div class="button-effect">
+       <h3><%= link_to "Blog", actualitys_path, class: "effect effect-5"%>
+        <%= link_to "Contact", contact_path, class: "effect effect-5" %></h3>
+      </div>
 
-     <h4>IMMO +</h4>
+
+      <h4>IMMO +</h4>
       <div class="actunew">
         <h2>Actualité</h2>
         <p>Retrouvez nos actualités<p>
         </div>
-
-     <div class="button-effect">
-      <h1>
-        <%= link_to "Actualité", actualitys_path, class: "effect effect-5", id: "linkeffect" %>
-        <%= link_to "Nouveauté", nouvelles_path, class: "effect effect-5" %></h1>
-      </div>
+        <ul class="list-inline tabs-underlined">
+          <li>
+            <%= link_to  "Actualité", actualitys_path, class: "tab-underlined active", id: "uder5"%>
+         </li>
+         <li>
+           <%= link_to "Nouveauté", nouvelles_path, class: "tab-underlined"  %>
+         </li>
+       </ul>
+     </div>
+     <div class="item active">
+      <%= image_tag "house_fond3.jpg", class: "d-block w-100", alt: "Carrousel slide 2", crop: :fill%>
     </div>
-   <div class="item active">
-    <%= image_tag "house_fond3.jpg", class: "d-block w-100", alt: "Carrousel slide 2", crop: :fill%>
+    <div class="item">
+      <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 3", crop: :fill %>
+    </div>
+    <div class="item">
+      <%= image_tag "house_fond5.jpg", class: "d-block w-100", alt: "Carrousel slide 5", crop: :fill%>
+    </div>
   </div>
-  <div class="item">
-    <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 3", crop: :fill %>
-  </div>
-   <div class="item">
-    <%= image_tag "house_fond5.jpg", class: "d-block w-100", alt: "Carrousel slide 5", crop: :fill%>
-  </div>
-</div>
 </div>
 
 <div class="masonry-wrapper"><div class="masonry">
