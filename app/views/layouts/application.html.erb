@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Immo</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>Immo</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="http://code.jquery.com/jquery.js"></script>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script src="http://code.jquery.com/jquery.js"></script>
 
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-glyphicons.css" type="text/css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-glyphicons.css" type="text/css">
+</head>
 
-  </head>
-
-  <body>
-    <%= yield %>
+<body>
+  <%= yield %>
 
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application' %>
   <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
-  </body>
+</body>
 </html>
