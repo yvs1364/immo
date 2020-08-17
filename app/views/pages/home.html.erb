@@ -1,6 +1,44 @@
- <div class="banner" style="background-color:  #59ABE3">
-     <div class="container">
-        <h3><strong><%= link_to "Blog", blog_path %> </strong><strong><%= link_to "Contact", contact_path %></strong></h3>
-        <h1> <strong><%= link_to "Achat", propertys_path %></strong> location catégorie3 Catégorie4 </h1>
-     </div>
+<div class="container-fluid">
+ <div id="Carousel" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-content">
+     <div class="button-effect">
+       <h3><%= link_to "Blog", actualitys_path, class: "effect effect-5"%>
+        <%= link_to "Contact", contact_path, class: "effect effect-5" %></h3>
+      </div>
+      <h4>IMMO +</h4>
+      <ul class="list-inline tabs-underlined">
+        <li>
+         <%= link_to "Achat", propertys_path,class: "tab-underlined "%>
+       </li>
+       <li>
+         <%= link_to "Location", locations_path, class: "tab-underlined"  %>
+       </li>
+       <li>
+        <%= link_to "Terrain", lots_path, class: "tab-underlined" %>
+      </li>
+      <li>
+       <%= link_to "Estimation", estimate_path, class: "tab-underlined"%>
+     </li>
+   </ul>
+ </div>
+ <div class="item active">
+  <%= image_tag "house_fond3.jpg", class: "d-block w-100", alt: "Carrousel slide 2", crop: :fill%>
+</div>
+<div class="item">
+  <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 3", crop: :fill %>
+</div>
+<div class="item">
+  <%= image_tag "house_fond5.jpg", class: "d-block w-100", alt: "Carrousel slide 5", crop: :fill%>
+</div>
+</div>
+<div class="container">
+  <div class="accueil">
+  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
+    Integer nec erat tincidunt, dapibus metus et, ullamcorper justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin metus eros, nec varius tortor tristique ut. Orci varius natoque penatibus et magnis dis parturient montes,
+    nascetur ridiculus mus. Mauris sed dui viverra, congue lorem id, congue diam. Integer hendrerit ultrices ligula non elementum.
+    Suspendisse lobortis ligula sit amet pulvinar tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+    Nunc id sapien in tortor aliquam bibendum. Praesent pretium mollis diam at eleifend.</p>
+</div>
 </div>

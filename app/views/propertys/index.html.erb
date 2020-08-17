@@ -50,7 +50,7 @@
   <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 3", crop: :fill %>
 </div>
 <div class="item">
-  <%= image_tag "house_fond5.jpg", class: "d-block w-100", alt: "Carrousel slide 5", crop: :fill%>
+  <%= image_tag "housefd.jpg", class: "d-block w-100", alt: "Carrousel slide 5", crop: :fill%>
 </div>
 
 </div>
@@ -59,7 +59,7 @@
 <div class="row">
  <div class="cards">
   <% @propertys.each do |p| %>
-  <div class="card-product">
+  <div class="card-product" id="cardprop">
     <div class="image-container">
       <%= image_tag "house.jpg" %>
       <div class="after">
@@ -67,14 +67,14 @@
         <h2> <%= "Surface: #{p.metre} m²" %> </h2>
         <h2> <%= " Nombre de pièces: #{p.room} " %> </h2>
         <h2> <%= "Situé à #{p.city}" %> </h2>
-        <h2> <%= "Prix: #{p.price} €" %> </h2>
+        <h2> <%= "Prix: #{p.price.to_s.in_groups_of(3)} €" %> </h2>
         <h2> <%= "Reférence de l'annonce:  #{p.ref}" %>
         </div>
       </div>
       <div class="card-product-infos">
         <h2><%= "#{p.name} de #{p.metre} m²"%> </h2>
         <p> <%= "Situé à #{p.city}" %> </p>
-        <p> <%= "Prix: #{p.price} €" %> </p>
+        <p> <%= "Prix: #{p.price.to_s.in_groups_of(3)} €" %> </p>
         <h3><%= link_to   property_path(p) do %>
           Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
           <% end %>
