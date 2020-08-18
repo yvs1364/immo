@@ -9,6 +9,7 @@
       <h4>IMMO +</h4>
       <div class="search">
        <h2>Trouvez votre chez-vous </h2>
+       <div id="searchstyle">
        <%= form_tag @propertys_path, method: :get do %>
        <%= text_field_tag :city, params[:city],
        class: "form-control", id: "city", placeholder: "Où voulez-vous vivre?"  %>
@@ -26,6 +27,7 @@
       class: "form-control", id: "room", placeholder: "Nombre de pièces min"  %>
       <%= submit_tag "Search", class: "btn btn-primary" %>
       <% end %>
+    </div>
     </div>
     <ul class="list-inline tabs-underlined">
       <li>

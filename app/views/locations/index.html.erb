@@ -9,48 +9,50 @@
       <h4>IMMO +</h4>
       <div class="search">
        <h2>Trouvez votre chez-vous </h2>
-       <%= form_tag @propertys_path, method: :get do %>
-       <%= text_field_tag :city, params[:city],
-       class: "form-control", id: "city", placeholder: "Où voulez-vous vivre?"  %>
-       <div class="row no-gutter">
-        <div class="col-lg-6">
-          <%= text_field_tag :price_min, params[:price_min],
-          class: "form-control", id: "pricemin", placeholder: "Prix min"  %>
+       <div id="searchstyle">
+         <%= form_tag @propertys_path, method: :get do %>
+         <%= text_field_tag :city, params[:city],
+         class: "form-control", id: "city", placeholder: "Où voulez-vous vivre?"  %>
+         <div class="row no-gutter">
+          <div class="col-lg-6">
+            <%= text_field_tag :price_min, params[:price_min],
+            class: "form-control", id: "pricemin", placeholder: "Prix min"  %>
+          </div>
+          <div class="col-lg-6">
+            <%= text_field_tag :price_max, params[:price_max],
+            class: "form-control", id: "pricemax", placeholder: "Prix max"  %>
+          </div>
         </div>
-        <div class="col-lg-6">
-          <%= text_field_tag :price_max, params[:price_max],
-          class: "form-control", id: "pricemax", placeholder: "Prix max"  %>
-        </div>
+        <%= text_field_tag :room, params[:room],
+        class: "form-control", id: "room", placeholder: "Nombre de pièces min"  %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+        <% end %>
       </div>
-      <%= text_field_tag :room, params[:room],
-      class: "form-control", id: "room", placeholder: "Nombre de pièces min"  %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
-      <% end %>
-    </div>
-    <ul class="list-inline tabs-underlined">
-      <li>
-       <%= link_to "Achat", propertys_path,class: "tab-underlined "%>
-     </li>
-     <li>
-       <%= link_to "Location", locations_path, class: "tab-underlined active", id: "uder2"  %>
-     </li>
-     <li>
-       <%= link_to "Terrain", lots_path, class: "tab-underlined"  %>
-     </li>
-     <li>
-       <%= link_to "Estimation", estimate_path, class: "tab-underlined"%>
-     </li>
-   </ul>
- </div>
- <div class="item active">
-  <%= image_tag "house_fond3.jpg", class: "d-block w-100", alt: "Carrousel slide 2", crop: :fill%>
-</div>
-<div class="item">
-  <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 3", crop: :fill %>
-</div>
-<div class="item">
-  <%= image_tag "housefd.jpg", class: "d-block w-100", alt: "Carrousel slide 5", crop: :fill%>
-</div>
+      </div>
+      <ul class="list-inline tabs-underlined">
+        <li>
+         <%= link_to "Achat", propertys_path,class: "tab-underlined "%>
+       </li>
+       <li>
+         <%= link_to "Location", locations_path, class: "tab-underlined active", id: "uder2"  %>
+       </li>
+       <li>
+         <%= link_to "Terrain", lots_path, class: "tab-underlined"  %>
+       </li>
+       <li>
+         <%= link_to "Estimation", estimate_path, class: "tab-underlined"%>
+       </li>
+     </ul>
+   </div>
+   <div class="item active">
+    <%= image_tag "house_fond3.jpg", class: "d-block w-100", alt: "Carrousel slide 2", crop: :fill%>
+  </div>
+  <div class="item">
+    <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 3", crop: :fill %>
+  </div>
+  <div class="item">
+    <%= image_tag "housefd.jpg", class: "d-block w-100", alt: "Carrousel slide 5", crop: :fill%>
+  </div>
 
 </div>
 </div>

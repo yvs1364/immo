@@ -94,21 +94,17 @@
   margin-left: 10%;
   margin-top: -4% !important;
   position: absolute !important;
-  width: 30%;
+  width: 38% !important;
   padding: 12px;
+  background-color: rgba(96, 223, 205, .3);
+  background-image: linear-gradient(315deg, rgba(96, 223, 205, .3), rgba(30, 154, 254, .3));
+  border-radius: 8px;
 }
 #asearch{
   padding-left: 10px;
 }
-
-// @media screen and (min-width: 601px) {
-//   .banner h1 {
-//     font-size: 32px;
-//   }
-// }
-
-// @media screen and (max-width: 600px) {
-//   .banner h1 {
-//     font-size: 18px;
-//   }
-// }
+#searchstyle{
+  margin-left: 10%;
+  width: 33em;
+  margin-bottom: 15px;
+}
