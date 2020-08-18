@@ -2,6 +2,33 @@
 .accueil{
   border-radius: 8px;
   padding: 10px;
-  border: solid 2px black;
-  box-shadow: 0 0 15px -10px #000;
+  border: solid 3px #60dfcd;
+  box-shadow: 0 0 15px -5px #000;
+}
+.accueil p{
+  font-size: 1.75em !important;
+  text-align: -webkit-auto;
+  font-family: "Baloo 2", serif;
+}
+#box {
+  padding-left: 50px;
+  padding-top: 15px;
+}
+#bank{
+  padding-left: 50px;
+  padding-top: 15px;
+}
+#imgbox{
+  width: 75%;
+  height: auto;
+}
+#imgbank{
+  width: 75%;
+  height: auto;
+}
+#welcome{
+  margin-left: 35%;
+  margin-top: 15% !important;
+  position: absolute !important;
+  font-size: 5em;
 }

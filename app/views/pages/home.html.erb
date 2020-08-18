@@ -7,6 +7,7 @@
         <%= link_to "Contact", contact_path, class: "effect effect-5" %></h3>
       </div>
       <h4>IMMO +</h4>
+      <h2 id="welcome">Bienvenu sur Immo +</h2>
       <ul class="list-inline tabs-underlined">
         <li>
          <%= link_to "Achat", propertys_path,class: "tab-underlined "%>
@@ -33,11 +34,34 @@
 </div>
 <div class="container">
   <div class="accueil">
-  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
-    Integer nec erat tincidunt, dapibus metus et, ullamcorper justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin metus eros, nec varius tortor tristique ut. Orci varius natoque penatibus et magnis dis parturient montes,
-    nascetur ridiculus mus. Mauris sed dui viverra, congue lorem id, congue diam. Integer hendrerit ultrices ligula non elementum.
-    Suspendisse lobortis ligula sit amet pulvinar tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
+      Integer nec erat tincidunt, dapibus metus et, ullamcorper justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin metus eros, nec varius tortor tristique ut. Orci varius natoque penatibus et magnis dis parturient montes,
+      nascetur ridiculus mus. Mauris sed dui viverra, congue lorem id, congue diam. Integer hendrerit ultrices ligula non elementum.
+      Suspendisse lobortis ligula sit amet pulvinar tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
     Nunc id sapien in tortor aliquam bibendum. Praesent pretium mollis diam at eleifend.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
+      Integer nec erat tincidunt, dapibus metus et, ullamcorper justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin metus eros, nec varius tortor tristique ut. Orci varius natoque penatibus et magnis dis parturient montes,
+      nascetur ridiculus mus. Mauris sed dui viverra, congue lorem id, congue diam. Integer hendrerit ultrices ligula non elementum.
+      Suspendisse lobortis ligula sit amet pulvinar tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+    Nunc id sapien in tortor aliquam bibendum. Praesent pretium mollis diam at eleifend.</p>
+  <div class="row" id="boxbank">
+    <div class="col" id="box">
+      <%= image_tag "box.jpg", crop: :fill, id: "imgbox" %>
+      <p>Besoin de déménageur ?</p>
+    </div>
+    <div class="col" id="bank">
+      <%= image_tag "bank.jpg", crop: :fill, id: "imgbank" %>
+      <p> Besoin d'une banque au meilleur taux ?</p>
+    </div>
 </div>
-</div>
+  </div>
+  <script>
+    $(document).ready(function() {
+      $('.carousel').carousel({
+        interval: 4000
+      })
+    });</script>
+  </div>

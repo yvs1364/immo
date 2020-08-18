@@ -8,11 +8,14 @@
   color: white;
   padding: 8px;
   margin: 8px 16px;
-  opacity: .4;
+  opacity: 1;
   cursor: pointer;
   text-decoration: none;
   border-bottom: 4px solid transparent;
   font-family: 'Roboto', sans-serif !important;
+}
+.tabs-underlined .tab-underlined:hover {
+  opacity: 0.7
 }
 
 .tabs-underlined .tab-underlined.active {
@@ -32,12 +35,12 @@
   border-bottom: 5px solid #93FB9D;
 }
 #uder5.active{
-   opacity: 1;
-   border-bottom: 5px solid #EC9F05;
+ opacity: 1;
+ border-bottom: 5px solid #EC9F05;
 }
 #uder6.active{
-   opacity: 1;
-   border-bottom: 5px solid #FF4E00;
+ opacity: 1;
+ border-bottom: 5px solid #FF4E00;
 }
 .list-inline{
   margin-top: 34%;
@@ -46,6 +49,6 @@
 }
 @media (min-width: 1600px) {
   .list-inline {
-  margin-top: 30%;
+    margin-top: 30%;
   }
 }
