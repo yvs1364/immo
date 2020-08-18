@@ -36,7 +36,7 @@ Lot.destroy_all
     Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nunc orci, feugiat in sem quis, cursus congue tellus. Sed id suscipit lacus.
     Phasellus aliquet facilisis ex, ut lobortis neque tincidunt id. Cras semper libero neque, ac tincidunt nunc molestie eget. Fusce efficitur elementum sapien, in efficitur ligula placerat a.
     Donec nec nisi lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.'
-    )
+  )
 end
 4.times do
   Nouvelle.create!(
@@ -61,7 +61,7 @@ end
     Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nunc orci, feugiat in sem quis, cursus congue tellus. Sed id suscipit lacus.
     Phasellus aliquet facilisis ex, ut lobortis neque tincidunt id. Cras semper libero neque, ac tincidunt nunc molestie eget. Fusce efficitur elementum sapien, in efficitur ligula placerat a.
     Donec nec nisi lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.'
-    )
+  )
 end
 
 20.times do
@@ -71,8 +71,8 @@ end
     metre: rand(30...130),
     city: %w[Marseille Pau Grans Artouste].sample,
     price: rand(100_000...500_000),
-    ref: rand(1001...1011),
-    )
+    ref: rand(1001...1011)
+  )
 end
 
 20.times do
@@ -82,18 +82,18 @@ end
     metre: rand(30...130),
     city: %w[Marseille Pau Grans Artouste].sample,
     price: rand(300...2000),
-    ref: rand(1051...1100),
-    )
+    ref: rand(1051...1100)
+  )
 end
 
 1.times do
   Lot.create!(
     name: 'Terrain',
-    city: "76 rue carnot Pau",
+    city: '76 rue carnot Pau',
     metre: rand(1000...10_000),
     price: rand(10_000...200_000),
-    ref: rand(1101...1150),
-    )
+    ref: rand(1101...1150)
+  )
 end
 
 puts "actuality #{Actuality.count}"

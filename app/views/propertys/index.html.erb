@@ -58,13 +58,44 @@
 
 <div class="row">
  <div class="cards">
-  <% @propertys.each do |p| %>
+    <% @propertys.each do |p| %>
+  <%if p == @propertys.first%>
+  <div class="card-product" id="cardprop">
+    <div class="image-container">
+      <div class="ribbon-wrapper"><div class="ribbon">Exclusivité</div></div>
+     <% if @propertys.name == "Maison" %>
+     <%= image_tag "house.jpg" %>
+     <% else %>
+     <%= image_tag "apartment.jpg" %>
+     <%end %>
+     <div class="after">
+      <h2> <%= "Type de bien: #{@propertys[0].name}" %> </h2>
+      <h2> <%= "Surface: #{@propertys.first.metre} m²" %> </h2>
+      <h2> <%= " Nombre de pièces: #{@propertys.first.room} " %> </h2>
+      <h2> <%= "Situé à #{@propertys.first.city}" %> </h2>
+      <h2> <%= "Prix: #{@propertys.first.price.to_s.in_groups_of(3)} €" %> </h2>
+      <h2> <%= "Reférence de l'annonce:  #{@propertys.first.ref}" %></h2>
+      </div>
+    </div>
+    <div class="card-product-infos">
+      <h2><%= "#{@propertys.first.name} de #{@propertys.first.metre} m²"%> </h2>
+      <p> <%= "Situé à #{@propertys.first.city}" %> </p>
+      <p id="prix"> <%= "Prix: #{@propertys.first.price.to_s.in_groups_of(3)} €" %> </p>
+      <h3><%= link_to   property_path(@propertys.first) do %></h3>
+        Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
+        <% end %>
+      </h3>
+    </div>
+  </div>
+<% end %>
+
+
   <div class="card-product" id="cardprop">
     <div class="image-container">
       <% if p.name == "Maison" %>
-        <%= image_tag "house.jpg" %>
+      <%= image_tag "house.jpg" %>
       <% else %>
-        <%= image_tag "apartment.jpg" %>
+      <%= image_tag "apartment.jpg" %>
       <%end %>
       <div class="after">
         <h2> <%= "Type de bien: #{p.name}" %> </h2>
@@ -72,14 +103,14 @@
         <h2> <%= " Nombre de pièces: #{p.room} " %> </h2>
         <h2> <%= "Situé à #{p.city}" %> </h2>
         <h2> <%= "Prix: #{p.price.to_s.in_groups_of(3)} €" %> </h2>
-        <h2> <%= "Reférence de l'annonce:  #{p.ref}" %>
+        <h2> <%= "Reférence de l'annonce:  #{p.ref}" %></h2>
         </div>
       </div>
       <div class="card-product-infos">
         <h2><%= "#{p.name} de #{p.metre} m²"%> </h2>
         <p> <%= "Situé à #{p.city}" %> </p>
         <p id="prix"> <%= "Prix: #{p.price.to_s.in_groups_of(3)} €" %> </p>
-        <h3><%= link_to   property_path(p) do %>
+        <h3><%= link_to   property_path(p) do %></h3>
           Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
           <% end %>
         </h3>

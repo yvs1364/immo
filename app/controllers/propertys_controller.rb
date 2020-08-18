@@ -39,7 +39,7 @@ class PropertysController < ApplicationController
   end
 end
 class String
-  def in_groups_of(n, sep=' ')
+  def in_groups_of(n, sep = ' ')
     chars.each_slice(n).map(&:join).join(sep)
   end
 end
