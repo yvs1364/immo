@@ -69,7 +69,8 @@ end
     name: %w[Maison Appartement].sample,
     room: rand(1...9),
     metre: rand(30...130),
-    city: %w[Marseille Pau Grans Artouste].sample,
+    city: ['76 rue carnot Pau', "136 Rue du Vallon des Auffes
+      13007 Marseille", 'Artouste', '1 Cours Camille Pelletan, 13450 Grans'].sample,
     price: rand(100_000...500_000),
     ref: rand(1001...1011)
   )
@@ -80,16 +81,18 @@ end
     name: %w[Maison Appartement].sample,
     room: rand(1...9),
     metre: rand(30...130),
-    city: %w[Marseille Pau Grans Artouste].sample,
+    city: ['76 rue carnot Pau', "136 Rue du Vallon des Auffes
+      13007 Marseille", 'Artouste', '1 Cours Camille Pelletan, 13450 Grans'].sample,
     price: rand(300...2000),
     ref: rand(1051...1100)
   )
 end
 
-1.times do
+20.times do
   Lot.create!(
     name: 'Terrain',
-    city: '76 rue carnot Pau',
+    city: ['76 rue carnot Pau', "136 Rue du Vallon des Auffes
+      13007 Marseille", 'Artouste', '1 Cours Camille Pelletan, 13450 Grans'].sample,
     metre: rand(1000...10_000),
     price: rand(10_000...200_000),
     ref: rand(1101...1150)
