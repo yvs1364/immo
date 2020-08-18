@@ -29,6 +29,9 @@
       </div>
       <ul class="list-inline tabs-underlined">
         <li>
+          <%= link_to "Accueil", root_path,class: "tab-underlined", id: "acc"%>
+       </li>
+        <li>
          <%= link_to "Achat", propertys_path,class: "tab-underlined "%>
        </li>
        <li>
@@ -53,13 +56,12 @@
 </div>
 </div>
 
-</div>
-</div>
+
 
 <div class="row">
  <div class="cards">
   <% @lots.each do |l| %>
-
+<%if l == @lots.first%>
   <div class="card-product" id="cardlot">
    <div class="image-container">
     <div class="ribbon-wrapper"><div class="ribbon">Exclusivité</div></div>
@@ -81,6 +83,28 @@
         <% end %>
       </div>
     </div>
+    <% else %>
+      <div class="card-product" id="cardlot">
+   <div class="image-container">
+    <%= image_tag "lot.jpg" %>
+    <div class="after">
+      <h2> <%= "Type de bien: #{l.name}" %> </h2>
+      <h2> <%= "Surface: #{l.metre} m²" %> </h2>
+      <h2> <%= "Situé à #{l.city}" %> </h2>
+      <h2> <%= "Prix: #{l.price.to_s.in_groups_of(3)} €" %> </h2>
+      <h2> <%= "Reférence de l'annonce:  #{l.ref}" %>
+      </div>
+    </div>
+    <div class="card-product-infos">
+      <h2><%="#{l.name} de #{l.metre} m²" %></h2>
+      <p> <%= "Situé à #{l.city}" %> </p>
+      <p id="prix"> <%= "Prix: #{l.price.to_s.in_groups_of(3)} €" %> </p>
+      <h3><%= link_to  lot_path(l) do %>
+        Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
     <% end %>
   </div>
   <script type="text/javascript">
@@ -93,3 +117,5 @@
 </div>
 </div>
 
+</div>
+</div>

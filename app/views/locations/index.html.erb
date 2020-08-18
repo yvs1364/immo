@@ -31,6 +31,9 @@
       </div>
       <ul class="list-inline tabs-underlined">
         <li>
+          <%= link_to "Accueil", root_path,class: "tab-underlined", id: "acc"%>
+       </li>
+        <li>
          <%= link_to "Achat", propertys_path,class: "tab-underlined "%>
        </li>
        <li>
@@ -73,7 +76,7 @@
      <div class="after">
       <h2> <%= "Type de bien: #{@locations.first.name}" %> </h2>
       <h2> <%= "Surface: #{@locations.first.metre} m²" %> </h2>
-      <h2> <%= " Nombre de pièces: #{@locations.first.room} " %> </h2>
+      <h2> <%= "Nombre de pièces: #{@locations.first.room} " %> </h2>
       <h2> <%= "Situé à #{@locations.first.city}" %> </h2>
       <h2> <%= "Prix: #{@locations.first.price.to_s.in_groups_of(3)} €" %> </h2>
       <h2> <%= "Reférence de l'annonce:  #{@locations.first.ref}" %></h2>

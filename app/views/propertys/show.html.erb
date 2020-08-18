@@ -1,6 +1,9 @@
 
 <div class="container-fluid">
-  <h5><%= link_to "Retour", propertys_path, id: "back-show" %> </h5>
+  <h5 style="font-size: 2em;"><%= link_to   propertys_path do %>
+    <%= fa_icon "chevron-left" %> Retour
+    <% end %>
+  </h5>
 </div>
 <div class="container">
   <div class="row">
@@ -73,7 +76,7 @@
   </div>
 
   <div id="divflex">
-    <p><strong>Ville: </strong><%= @property.city %></p>
+    <p><strong>Adresse: </strong><%= @property.city %></p>
     <p><strong>Prix: </strong><%= @property.price.to_s.in_groups_of(3) %><strong> €</strong></p>
     <p><strong>Reférence de l'annonce: </strong><%= @property.ref %></p>
   </div>

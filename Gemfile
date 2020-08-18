@@ -33,6 +33,7 @@ gem 'jquery-ui-rails'
 gem 'pg_search', '~> 2.3.0'
 gem 'pundit'
 gem 'simple_form'
+gem "font-awesome-rails"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

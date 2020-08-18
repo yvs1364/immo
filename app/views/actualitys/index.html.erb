@@ -1,69 +1,73 @@
-<div class="container-fluid">
- <div id="Carousel" class="carousel slide">
-  <div class="carousel-inner">
-    <div class="carousel-content">
-     <h5><strong><%= link_to "Faire une recherche ", propertys_path %></strong></h5>
-     <div class="button-effect">
-       <h3><%= link_to "Blog", actualitys_path, class: "effect effect-5"%>
-        <%= link_to "Contact", contact_path, class: "effect effect-5" %></h3>
-      </div>
-
-
-      <h4>IMMO +</h4>
-      <div class="actunew">
-        <h2>Actualité</h2>
-        <p>Retrouvez nos actualités<p>
+<body id="blog">
+  <div class="container-fluid">
+   <div id="Carousel" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-content">
+       <h5><strong><%= link_to "Faire une recherche ", propertys_path %></strong></h5>
+       <div class="button-effect">
+         <h3><%= link_to "Blog", actualitys_path, class: "effect effect-5"%>
+          <%= link_to "Contact", contact_path, class: "effect effect-5" %></h3>
         </div>
-        <ul class="list-inline tabs-underlined">
-          <li>
-            <%= link_to  "Actualités", actualitys_path, class: "tab-underlined active", id: "uder5"%>
-         </li>
-         <li>
-           <%= link_to "Nouveautés", nouvelles_path, class: "tab-underlined"  %>
-         </li>
-       </ul>
-     </div>
-     <div class="item active">
-      <%= image_tag "house_fond3.jpg", class: "d-block w-100", alt: "Carrousel slide 2", crop: :fill%>
-    </div>
-    <div class="item">
-      <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 3", crop: :fill %>
-    </div>
-    <div class="item">
-  <%= image_tag "housefd.jpg", class: "d-block w-100", alt: "Carrousel slide 5", crop: :fill%>    </div>
-  </div>
-</div>
 
-<div class="masonry-wrapper"><div class="masonry">
-  <% @actualitys.each do |a| %>
-  <div class="masonry-item">
-    <div class="masonry-content" id="actu">
-      <%= image_tag "article.jpg" %>
-      <h2 class="masonry-title"> <%= a.name %> </h2>
-      <p class="masonry-description"> <%= a.texte%></p>
-      <h3><%= link_to   actuality_path(a) do %>
-        Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
-        <% end %> </h3>
+
+        <h4>IMMO +</h4>
+        <div class="actunew">
+          <h2>Actualité</h2>
+          <p>Retrouvez nos actualités<p>
+          </div>
+          <ul class="list-inline tabs-underlined">
+            <li>
+              <%= link_to "Accueil", root_path,class: "tab-underlined", id: "acc"%>
+            </li>
+            <li>
+              <%= link_to  "Actualités", actualitys_path, class: "tab-underlined active", id: "uder5"%>
+            </li>
+            <li>
+             <%= link_to "Nouveautés", nouvelles_path, class: "tab-underlined"  %>
+           </li>
+         </ul>
+       </div>
+       <div class="item active">
+        <%= image_tag "house_fond3.jpg", class: "d-block w-100", alt: "Carrousel slide 2", crop: :fill%>
+      </div>
+      <div class="item">
+        <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 3", crop: :fill %>
+      </div>
+      <div class="item">
+        <%= image_tag "housefd.jpg", class: "d-block w-100", alt: "Carrousel slide 5", crop: :fill%>    </div>
       </div>
     </div>
-    <% end %>
-  </div></div>
-</div>
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('.carousel').carousel({
-      interval: 4000
-    })
-  });
-</script>
-<script>
-  function resizeMasonryItem(item){
-    /* Get the grid object, its row-gap, and the size of its implicit rows */
-    var grid = document.getElementsByClassName('masonry')[0];
-    if( grid ) {
-      var rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap')),
-      rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows')),
-      gridImagesAsContent = item.querySelector('img.masonry-content');
+
+    <div class="masonry-wrapper"><div class="masonry">
+      <% @actualitys.each do |a| %>
+      <div class="masonry-item">
+        <div class="masonry-content" id="actu">
+          <%= image_tag "article.jpg" %>
+          <h2 class="masonry-title"> <%= a.name %> </h2>
+          <p class="masonry-description"> <%= a.texte%></p>
+          <h3><%= link_to   actuality_path(a) do %>
+            Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
+            <% end %> </h3>
+          </div>
+        </div>
+        <% end %>
+      </div></div>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.carousel').carousel({
+          interval: 4000
+        })
+      });
+    </script>
+    <script>
+      function resizeMasonryItem(item){
+        /* Get the grid object, its row-gap, and the size of its implicit rows */
+        var grid = document.getElementsByClassName('masonry')[0];
+        if( grid ) {
+          var rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap')),
+          rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows')),
+          gridImagesAsContent = item.querySelector('img.masonry-content');
 
     /*
      * Spanning for any brick = S
@@ -131,3 +135,4 @@ masonryEvents.forEach( function(event) {
 waitForImages();
 </script>
 </div>
+</body>

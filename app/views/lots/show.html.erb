@@ -1,6 +1,8 @@
 <div class="container-fluid">
-  <h5 class="back"><%= link_to "Retour", lots_path, id:"back-show" %> </h5>
-</div>
+    <h5 style="font-size: 2em;"><%= link_to   lots_path do %>
+    <%= fa_icon "chevron-left" %> Retour
+    <% end %>
+  </h5>
 <div class="container">
   <div class="row">
     <div class="d-flex justify-content-start">

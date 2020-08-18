@@ -1,7 +1,7 @@
 .tabs-underlined {
   display: flex;
   align-items: center;
-  font-size: 32px;
+  font-size: 2em !important;
 }
 
 .tabs-underlined .tab-underlined {
@@ -9,10 +9,12 @@
   padding: 8px;
   margin: 8px 16px;
   opacity: 1;
+  font-weight: bold;
   cursor: pointer;
   text-decoration: none;
   border-bottom: 4px solid transparent;
-  font-family: 'Roboto', sans-serif !important;
+  font-family: 'Merriweather',sans-serif  !important;
+  font-size: 36px !important;
 }
 .tabs-underlined .tab-underlined:hover {
   opacity: 0.7
@@ -52,3 +54,16 @@
     margin-top: 30%;
   }
 }
+#acc{
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  padding: 3px;
+  margin: 0px 16px;
+
+}
+#acc.active{
+  opacity: 1;
+  border-bottom: 5px solid #9F98E8;
+}
+
