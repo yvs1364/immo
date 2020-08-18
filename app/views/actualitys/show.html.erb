@@ -1,7 +1,8 @@
 <body id="body-contact">
     <h5><%= link_to "Retour", actualitys_path,  id: "back"  %> </h5>
-    <div class="container" id="cadre">
-        <h1 id="aligne"> <%= @actuality.name %> <h1>
+    <div class="container" id="cadreactu">
+      <%= image_tag "article.jpg", id: "imgactu"%>
+        <h1> <%= @actuality.name %> <h1>
         <p id="texte"> <%= @actuality.texte %> </p>
     </div>
 </body>

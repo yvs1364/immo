@@ -37,11 +37,11 @@
 <div class="masonry-wrapper"><div class="masonry">
  <% @nouvelles.each do |n| %>
  <div class="masonry-item">
-  <div class="masonry-content">
-    <%= image_tag "article.jpg" %>
+  <div class="masonry-content" id="new">
+    <%= image_tag "new.jpg" %>
     <h2 class="masonry-title"> <%= n.name %> </h2>
     <p class="masonry-description"> <%= n.texte%></p>
-    <h3><%= link_to   nouvelle_path(n) do %>
+    <h3><%= link_to  nouvelle_path(n) do %>
       Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
       <% end %> </h3>
     </div>

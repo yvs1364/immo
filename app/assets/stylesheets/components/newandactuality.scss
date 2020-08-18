@@ -1,23 +1,29 @@
 #texte{
-    font-size: 20px;
-    font-family: 'Montserrat',sans-serif;
-    padding: 10px;
-    text-align: justify;
-    white-space: pre-line;
+  font-size: 20px;
+  font-family: 'Montserrat',sans-serif;
+  padding: 10px;
+  text-align: justify;
+  white-space: pre-line;
+   font-family: "Baloo 2", serif;
 
 }
-#cadre{
-    // border: 3px solid #78788c;
+#cadreactu{
+    border: 3px solid #EC9F05;
+    border-radius: 8px;
+    background: white;
+    box-shadow:0 0 40px -10px #000;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+#cadreblog{
+    border: 3px solid #FF4E00;
     border-radius: 8px;
     background: white;
     box-shadow:0 0 40px -10px #000;
     padding-top: 15px;
     padding-bottom: 15px;
 }
-#aligne{
-    text-align: center;
-}
-#pactualitie{
+  #pactualitie{
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 3;
@@ -25,4 +31,18 @@
     -webkit-box-orient: vertical;
     font-size: 16px;
 
-}
+  }
+  #actu{
+    border: 3px solid #EC9F05;
+  }
+  #new{
+    border: 3px solid #FF4E00;
+  }
+  #imgactu{
+    margin-top: 9em;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    margin-left: 10px;
+    height: 22em;
+    float: left;
+  }

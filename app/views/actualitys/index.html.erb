@@ -37,7 +37,7 @@
 <div class="masonry-wrapper"><div class="masonry">
   <% @actualitys.each do |a| %>
   <div class="masonry-item">
-    <div class="masonry-content">
+    <div class="masonry-content" id="actu">
       <%= image_tag "article.jpg" %>
       <h2 class="masonry-title"> <%= a.name %> </h2>
       <p class="masonry-description"> <%= a.texte%></p>
