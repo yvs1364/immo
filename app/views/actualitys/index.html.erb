@@ -28,46 +28,53 @@
          </ul>
        </div>
        <div class="item active">
-        <%= image_tag "house_fond3.jpg", class: "d-block w-100", alt: "Carrousel slide 2", crop: :fill%>
+        <%= image_tag "house_fond3.jpg", class: "d-block w-100", alt: "Carrousel slide 1", crop: :fill%>
       </div>
       <div class="item">
-        <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 3", crop: :fill %>
+        <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 2", crop: :fill %>
       </div>
       <div class="item">
-        <%= image_tag "housefd.jpg", class: "d-block w-100", alt: "Carrousel slide 5", crop: :fill%>    </div>
+        <%= image_tag "housefd.jpg", class: "d-block w-100", alt: "Carrousel slide 3", crop: :fill%>
+      </div>
+      <div class="item">
+        <%= image_tag "carrouselfond2.jpg", class: "d-block w-100", alt: "Carrousel slide 4", crop: :fill%>
+      </div>
+      <div class="item">
+        <%= image_tag "carrouselfond3.jpg", class: "d-block w-100", alt: "Carrousel slide 5", crop: :fill%>
       </div>
     </div>
+  </div>
 
-    <div class="masonry-wrapper"><div class="masonry">
-      <% @actualitys.each do |a| %>
-      <div class="masonry-item">
-        <div class="masonry-content" id="actu">
-          <%= image_tag "article.jpg" %>
-          <h2 class="masonry-title"> <%= a.name %> </h2>
-          <p class="masonry-description"> <%= a.texte%></p>
-          <h3><%= link_to   actuality_path(a) do %>
-            Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
-            <% end %> </h3>
-          </div>
+  <div class="masonry-wrapper"><div class="masonry">
+    <% @actualitys.each do |a| %>
+    <div class="masonry-item">
+      <div class="masonry-content" id="actu">
+        <%= image_tag "article.jpg" %>
+        <h2 class="masonry-title"> <%= a.name %> </h2>
+        <p class="masonry-description"> <%= a.texte%></p>
+        <h3><%= link_to   actuality_path(a) do %>
+          Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
+          <% end %> </h3>
         </div>
-        <% end %>
-      </div></div>
-    </div>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('.carousel').carousel({
-          interval: 4000
-        })
-      });
-    </script>
-    <script>
-      function resizeMasonryItem(item){
-        /* Get the grid object, its row-gap, and the size of its implicit rows */
-        var grid = document.getElementsByClassName('masonry')[0];
-        if( grid ) {
-          var rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap')),
-          rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows')),
-          gridImagesAsContent = item.querySelector('img.masonry-content');
+      </div>
+      <% end %>
+    </div></div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.carousel').carousel({
+        interval: 4000
+      })
+    });
+  </script>
+  <script>
+    function resizeMasonryItem(item){
+      /* Get the grid object, its row-gap, and the size of its implicit rows */
+      var grid = document.getElementsByClassName('masonry')[0];
+      if( grid ) {
+        var rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap')),
+        rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows')),
+        gridImagesAsContent = item.querySelector('img.masonry-content');
 
     /*
      * Spanning for any brick = S

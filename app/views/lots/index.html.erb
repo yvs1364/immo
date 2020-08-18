@@ -26,42 +26,46 @@
         <%= submit_tag "Search", class: "btn btn-primary" %>
         <% end %>
       </div>
-      </div>
-      <ul class="list-inline tabs-underlined">
-        <li>
-          <%= link_to "Accueil", root_path,class: "tab-underlined", id: "acc"%>
-       </li>
-        <li>
-         <%= link_to "Achat", propertys_path,class: "tab-underlined "%>
-       </li>
-       <li>
-         <%= link_to "Location", locations_path, class: "tab-underlined"  %>
-       </li>
-       <li>
-        <%= link_to "Terrain", lots_path, class: "tab-underlined active",id: "uder3"   %>
+    </div>
+    <ul class="list-inline tabs-underlined">
+      <li>
+        <%= link_to "Accueil", root_path,class: "tab-underlined", id: "acc"%>
       </li>
       <li>
-       <%= link_to "Estimation", estimate_path, class: "tab-underlined"%>
+       <%= link_to "Achat", propertys_path,class: "tab-underlined "%>
      </li>
-   </ul>
- </div>
- <div class="item active">
-  <%= image_tag "house_fond3.jpg", class: "d-block w-100", alt: "Carrousel slide 2", crop: :fill%>
+     <li>
+       <%= link_to "Location", locations_path, class: "tab-underlined"  %>
+     </li>
+     <li>
+      <%= link_to "Terrain", lots_path, class: "tab-underlined active",id: "uder3"   %>
+    </li>
+    <li>
+     <%= link_to "Estimation", estimate_path, class: "tab-underlined"%>
+   </li>
+ </ul>
+</div>
+<div class="item active">
+  <%= image_tag "house_fond3.jpg", class: "d-block w-100", alt: "Carrousel slide 1", crop: :fill%>
 </div>
 <div class="item">
-  <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 3", crop: :fill %>
+  <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 2", crop: :fill %>
 </div>
 <div class="item">
-  <%= image_tag "housefd.jpg", class: "d-block w-100", alt: "Carrousel slide 5", crop: :fill%>
+  <%= image_tag "housefd.jpg", class: "d-block w-100", alt: "Carrousel slide 3", crop: :fill%>
+</div>
+<div class="item">
+  <%= image_tag "carrouselfond2.jpg", class: "d-block w-100", alt: "Carrousel slide 4", crop: :fill%>
+</div>
+<div class="item">
+  <%= image_tag "carrouselfond3.jpg", class: "d-block w-100", alt: "Carrousel slide 5", crop: :fill%>
 </div>
 </div>
-
-
 
 <div class="row">
  <div class="cards">
   <% @lots.each do |l| %>
-<%if l == @lots.first%>
+  <%if l == @lots.first%>
   <div class="card-product" id="cardlot">
    <div class="image-container">
     <div class="ribbon-wrapper"><div class="ribbon">Exclusivité</div></div>
@@ -84,37 +88,37 @@
       </div>
     </div>
     <% else %>
-      <div class="card-product" id="cardlot">
-   <div class="image-container">
-    <%= image_tag "lot.jpg" %>
-    <div class="after">
-      <h2> <%= "Type de bien: #{l.name}" %> </h2>
-      <h2> <%= "Surface: #{l.metre} m²" %> </h2>
-      <h2> <%= "Situé à #{l.city}" %> </h2>
-      <h2> <%= "Prix: #{l.price.to_s.in_groups_of(3)} €" %> </h2>
-      <h2> <%= "Reférence de l'annonce:  #{l.ref}" %>
+    <div class="card-product" id="cardlot">
+     <div class="image-container">
+      <%= image_tag "lot.jpg" %>
+      <div class="after">
+        <h2> <%= "Type de bien: #{l.name}" %> </h2>
+        <h2> <%= "Surface: #{l.metre} m²" %> </h2>
+        <h2> <%= "Situé à #{l.city}" %> </h2>
+        <h2> <%= "Prix: #{l.price.to_s.in_groups_of(3)} €" %> </h2>
+        <h2> <%= "Reférence de l'annonce:  #{l.ref}" %>
+        </div>
       </div>
-    </div>
-    <div class="card-product-infos">
-      <h2><%="#{l.name} de #{l.metre} m²" %></h2>
-      <p> <%= "Situé à #{l.city}" %> </p>
-      <p id="prix"> <%= "Prix: #{l.price.to_s.in_groups_of(3)} €" %> </p>
-      <h3><%= link_to  lot_path(l) do %>
-        Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
-        <% end %>
+      <div class="card-product-infos">
+        <h2><%="#{l.name} de #{l.metre} m²" %></h2>
+        <p> <%= "Situé à #{l.city}" %> </p>
+        <p id="prix"> <%= "Prix: #{l.price.to_s.in_groups_of(3)} €" %> </p>
+        <h3><%= link_to  lot_path(l) do %>
+          Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
+          <% end %>
+        </div>
       </div>
+      <% end %>
+      <% end %>
     </div>
-    <% end %>
-    <% end %>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.carousel').carousel({
+          interval: 4000
+        })
+      });
+    </script>
   </div>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('.carousel').carousel({
-        interval: 4000
-      })
-    });
-  </script>
-</div>
 </div>
 
 </div>
