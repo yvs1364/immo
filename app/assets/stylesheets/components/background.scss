@@ -1,5 +1,5 @@
 #blog{
-  background-image: url(../assets/fondblog.jpg);
+  background-image: url(asset-path("fondblog.jpg"));
   background-size: cover;
   height: 100%;
   margin: 0;
@@ -7,7 +7,7 @@
   background-attachment: fixed;
 }
 #estimate-contact{
-  background-image: url(../assets/adobefume.jpeg);
+  background-image: url(asset-path("adobefume.jpeg"));
   background-size: cover;
   height: 100%;
   margin: 0;
