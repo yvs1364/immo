@@ -57,36 +57,37 @@
 
 <div class="row">
  <div class="cards">
-<% @locations.each do |locate| %>
+  <% @locations.each do |locate| %>
   <%if locate == @locations.first%>
-    <div class="card-product" id="cardlocate">
-      <div class="image-container">
-       <div class="ribbon-wrapper"><div class="ribbon">Exclusivité</div></div>
+  <div class="card-product" id="cardlocate">
+    <div class="image-container">
+     <div class="ribbon-wrapper"><div class="ribbon">Exclusivité</div></div>
 
-    <% if locate.name == "Maison" %>
-    <%= image_tag "house_interior.jpg" %>
-    <% else %>
-    <%= image_tag "locate.jpg" %>
-    <%end %>
-       <div class="after">
-        <h2> <%= "Type de bien: #{@locations.first.name}" %> </h2>
-        <h2> <%= "Surface: #{@locations.first.metre} m²" %> </h2>
-        <h2> <%= " Nombre de pièces: #{@locations.first.room} " %> </h2>
-        <h2> <%= "Situé à #{@locations.first.city}" %> </h2>
-        <h2> <%= "Prix: #{@locations.first.price.to_s.in_groups_of(3)} €" %> </h2>
-        <h2> <%= "Reférence de l'annonce:  #{@locations.first.ref}" %></h2>
-      </div>
+     <% if locate.name == "Maison" %>
+     <%= image_tag "house_interior.jpg" %>
+     <% else %>
+     <%= image_tag "locate.jpg" %>
+     <%end %>
+     <div class="after">
+      <h2> <%= "Type de bien: #{@locations.first.name}" %> </h2>
+      <h2> <%= "Surface: #{@locations.first.metre} m²" %> </h2>
+      <h2> <%= " Nombre de pièces: #{@locations.first.room} " %> </h2>
+      <h2> <%= "Situé à #{@locations.first.city}" %> </h2>
+      <h2> <%= "Prix: #{@locations.first.price.to_s.in_groups_of(3)} €" %> </h2>
+      <h2> <%= "Reférence de l'annonce:  #{@locations.first.ref}" %></h2>
     </div>
-    <div class="card-product-infos">
-      <h2><%= "#{@locations.first.name} de #{@locations.first.metre} m²"%> </h2>
-      <p> <%= "Situé à #{@locations.first.city}" %> </p>
-      <p id="prix"> <%= "Prix: #{@locations.first.price} €" %> </p>
-      <h3><%= link_to   location_path(@locations.first) do %></h3>
+  </div>
+  <div class="card-product-infos">
+    <h2><%= "#{@locations.first.name} de #{@locations.first.metre} m²"%> </h2>
+    <p> <%= "Situé à #{@locations.first.city}" %> </p>
+    <p id="prix"> <%= "Prix: #{@locations.first.price} €" %> </p>
+    <h3><%= link_to   location_path(@locations.first) do %>
       Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
       <% end %>
-    </div>
-    </div>
-  <% end %>
+    </h3>
+  </div>
+</div>
+<% end %>
 
 <div class="card-product" id="cardlocate">
   <div class="image-container">
@@ -103,27 +104,28 @@
       <h2> <%= "Situé à #{locate.city}" %> </h2>
       <h2> <%= "Prix: #{locate.price} €" %> </h2>
       <h2> <%= "Reférence de l'annonce:  #{locate.ref}" %></h2>
-      </div>
     </div>
-    <div class="card-product-infos">
-      <h2><%= "#{locate.name} de #{locate.metre} m²" %></h2>
-      <p> <%= "Situé à #{locate.city}" %> </p>
-      <p id="prix"> <%= "Prix: #{locate.price} €" %> </p>
-      <h3><%= link_to   location_path(locate) do %></h3>
-        Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
-        <% end %>
-      </div>
-    </div>
+  </div>
+  <div class="card-product-infos">
+    <h2><%= "#{locate.name} de #{locate.metre} m²" %></h2>
+    <p> <%= "Situé à #{locate.city}" %> </p>
+    <p id="prix"> <%= "Prix: #{locate.price} €" %> </p>
+    <h3><%= link_to   location_path(locate) do %>
+      Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
+      <% end %>
+    </h3>
+  </div>
+</div>
 <% end %>
 
-  </div>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('.carousel').carousel({
-        interval: 4000
-      })
-    });
-  </script>
+</div>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.carousel').carousel({
+      interval: 4000
+    })
+  });
+</script>
 </div>
 </div>
 
