@@ -1,3 +1,4 @@
+<body style="background-image: url(../assets/adobe.jpg) !important; background-size: cover;">
 <div class="container-fluid">
  <div id="Carousel" class="carousel slide">
   <div class="carousel-inner">
@@ -112,7 +113,7 @@
       <h2><%= "#{p.name} de #{p.metre} m²"%> </h2>
       <p> <%= "Situé à #{p.city}" %> </p>
       <p id="prix"> <%= "Prix: #{p.price.to_s.in_groups_of(3)} €" %> </p>
-      <h3><%= link_to   property_path(p) do %></h3>
+      <h3><%= link_to   property_path(p) do %>
       Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
       <% end %>
     </h3>
@@ -131,3 +132,4 @@
 </script>
 </div>
 </div>
+</body>

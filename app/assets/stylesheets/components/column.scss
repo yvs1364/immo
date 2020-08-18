@@ -9,13 +9,14 @@
   font-size: 16px;
   margin-top: -25px;
   text-align: justify;
+
 }
 .col-contact{
-  height: 40em;
+  height: 45em;
   width: 25em;
   right: 0;
   position: absolute;
-  top: 5%;
+  top: 3%;
   border: 3px solid #e6e6e6;
   background: #59ABE3;
   padding: 15px;
@@ -35,6 +36,7 @@
   color: #4b4a4a;
   font-size: 1.45em;
   font-family: "roboto";
+  margin: -10px 0 10px !important;
 }
 #back-show{
   font-family: 'roboto';
@@ -65,7 +67,7 @@
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
-  width: 20%;
+  width: 30%;
 }
 #divflex2{
   padding-left: 10px;
@@ -98,3 +100,7 @@
   box-shadow: 2px 2px 15px #B1B1B1;
   border-radius: 8px;
 }
+textarea {
+    background: none;
+    width: 100%;
+  }
