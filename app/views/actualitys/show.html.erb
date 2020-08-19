@@ -1,5 +1,8 @@
-<body id="body-contact">
-    <h5><%= link_to "Retour", actualitys_path,  id: "back"  %> </h5>
+<body id="blog">
+      <h5 style="font-size: 2em;" id="back"><%= link_to  actualitys_path do %>
+    <%= fa_icon "chevron-left" %> Retour
+    <% end %>
+  </h5>
     <div class="container" id="cadreactu">
       <%= image_tag "article.jpg", id: "imgactu"%>
         <h1> <%= @actuality.name %> <h1>
