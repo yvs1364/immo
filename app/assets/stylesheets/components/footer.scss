@@ -1,0 +1,33 @@
+footer{
+  background-color: rgba(96, 223, 205, 0.3);
+  background-image: linear-gradient(315deg, rgba(96, 223, 205, 0.3), rgba(30, 154, 254, 0.3));
+  box-shadow: 0 0 20px -5px #000;
+  padding-top: 10px;
+  margin-top: 5em;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+footer h5{
+  color: black !important;
+  opacity: .8 !important;
+}
+footer p {
+  color: black;
+  opacity: .8;
+}
+footer a{
+  color: black !important;
+  opacity: .8 !important;
+}
+footer a:hover{
+  color: black !important;
+  opacity: .3 !important;
+}
+#btnsocial{
+  font-size: 2em;
+  text-align: none !important;
+  display: table-cell;
+  width: 100%;
+  padding: 10px;
+  vertical-align: middle;
+}
