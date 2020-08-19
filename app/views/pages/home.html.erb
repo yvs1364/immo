@@ -1,79 +1,182 @@
 <body id="accueil">
-<div class="container-fluid">
- <div id="Carousel" class="carousel slide">
-  <div class="carousel-inner">
-    <div class="carousel-content">
-     <div class="button-effect">
-       <h3><%= link_to "Blog", actualitys_path, class: "effect effect-5"%>
-        <%= link_to "Contact", contact_path, class: "effect effect-5" %></h3>
-      </div>
-      <h4>IMMO +</h4>
-      <h2 id="welcome">Bienvenu sur Immo +</h2>
-      <ul class="list-inline tabs-underlined">
+  <div class="container-fluid">
+   <div id="Carousel" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-content">
+       <div class="button-effect">
+         <h3><%= link_to "Blog", actualitys_path, class: "effect effect-5"%>
+          <%= link_to "Contact", contact_path, class: "effect effect-5" %></h3>
+        </div>
+        <h4>IMMO +</h4>
+        <h2 id="welcome">Bienvenu sur Immo +</h2>
+        <ul class="list-inline tabs-underlined">
+          <li>
+            <%= link_to "Accueil", root_path,class: "tab-underlined active", id: "acc"%>
+          </li>
+          <li>
+           <%= link_to "Achat", propertys_path,class: "tab-underlined "%>
+         </li>
+         <li>
+           <%= link_to "Location", locations_path, class: "tab-underlined"  %>
+         </li>
+         <li>
+          <%= link_to "Terrain", lots_path, class: "tab-underlined" %>
+        </li>
         <li>
-          <%= link_to "Accueil", root_path,class: "tab-underlined active", id: "acc"%>
+         <%= link_to "Estimation", estimate_path, class: "tab-underlined"%>
        </li>
-        <li>
-         <%= link_to "Achat", propertys_path,class: "tab-underlined "%>
-       </li>
-       <li>
-         <%= link_to "Location", locations_path, class: "tab-underlined"  %>
-       </li>
-       <li>
-        <%= link_to "Terrain", lots_path, class: "tab-underlined" %>
-      </li>
-      <li>
-       <%= link_to "Estimation", estimate_path, class: "tab-underlined"%>
-     </li>
-   </ul>
- </div>
- <div class="item active">
-  <%= image_tag "house_fond3.jpg", class: "d-block w-100", alt: "Carrousel slide 1", crop: :fill%>
-</div>
-<div class="item">
-  <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 2", crop: :fill %>
-</div>
-<div class="item">
-  <%= image_tag "housefd.jpg", class: "d-block w-100", alt: "Carrousel slide 3", crop: :fill%>
-</div>
-<div class="item">
-  <%= image_tag "carrouselfond2.jpg", class: "d-block w-100", alt: "Carrousel slide 4", crop: :fill%>
-</div>
-<div class="item">
-  <%= image_tag "carrouselfond3.jpg", class: "d-block w-100", alt: "Carrousel slide 5", crop: :fill%>
-</div>
+     </ul>
+   </div>
+   <div class="item active">
+    <%= image_tag "house_fond3.jpg", class: "d-block w-100", alt: "Carrousel slide 1", crop: :fill%>
   </div>
+  <div class="item">
+    <%= image_tag "house_snow.jpg", class: "d-block w-100", alt: "Carrousel slide 2", crop: :fill %>
+  </div>
+  <div class="item">
+    <%= image_tag "housefd.jpg", class: "d-block w-100", alt: "Carrousel slide 3", crop: :fill%>
+  </div>
+  <div class="item">
+    <%= image_tag "carrouselfond2.jpg", class: "d-block w-100", alt: "Carrousel slide 4", crop: :fill%>
+  </div>
+  <div class="item">
+    <%= image_tag "carrouselfond3.jpg", class: "d-block w-100", alt: "Carrousel slide 5", crop: :fill%>
+  </div>
+</div>
 <div class="container">
-  <div class="accueil">
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
-      Integer nec erat tincidunt, dapibus metus et, ullamcorper justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin metus eros, nec varius tortor tristique ut. Orci varius natoque penatibus et magnis dis parturient montes,
-      nascetur ridiculus mus. Mauris sed dui viverra, congue lorem id, congue diam. Integer hendrerit ultrices ligula non elementum.
-      Suspendisse lobortis ligula sit amet pulvinar tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-    Nunc id sapien in tortor aliquam bibendum. Praesent pretium mollis diam at eleifend.</p>
+  <section class="container-boxes">
+   <div class="box">
+    <div class="text">
+      <h3>Immobilier</h3>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
+        Integer nec erat tincidunt, dapibus metus et, ullamcorper justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin metus eros, nec varius tortor tristique ut. Orci varius natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. Mauris sed dui viverra, congue lorem id, congue diam. Integer hendrerit ultrices ligula non elementum.
+        Suspendisse lobortis ligula sit amet pulvinar tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+      Nunc id sapien in tortor aliquam bibendum. Praesent pretium mollis diam at eleifend.</p>
+    </div>
+  </div>
+  <div class="box">
+    <div class="text">
+      <h3>Immobilier</h3>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
+        Integer nec erat tincidunt, dapibus metus et, ullamcorper justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin metus eros, nec varius tortor tristique ut. Orci varius natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. Mauris sed dui viverra, congue lorem id, congue diam. Integer hendrerit ultrices ligula non elementum.
+        Suspendisse lobortis ligula sit amet pulvinar tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+      Nunc id sapien in tortor aliquam bibendum. Praesent pretium mollis diam at eleifend.</p>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
-      Integer nec erat tincidunt, dapibus metus et, ullamcorper justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin metus eros, nec varius tortor tristique ut. Orci varius natoque penatibus et magnis dis parturient montes,
-      nascetur ridiculus mus. Mauris sed dui viverra, congue lorem id, congue diam. Integer hendrerit ultrices ligula non elementum.
-      Suspendisse lobortis ligula sit amet pulvinar tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-    Nunc id sapien in tortor aliquam bibendum. Praesent pretium mollis diam at eleifend.</p>
+    </div>
+  </div>
+  <div class="box">
+    <div class="text">
+      <h3>Immobilier</h3>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
+        Integer nec erat tincidunt, dapibus metus et, ullamcorper justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin metus eros, nec varius tortor tristique ut. Orci varius natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. Mauris sed dui viverra, congue lorem id, congue diam. Integer hendrerit ultrices ligula non elementum.
+        Suspendisse lobortis ligula sit amet pulvinar tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+      Nunc id sapien in tortor aliquam bibendum. Praesent pretium mollis diam at eleifend.</p>
+
+    </div>
+  </div>
+  <div class="box">
+    <div class="text">
+      <h3>Immobilier</h3>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
+        Integer nec erat tincidunt, dapibus metus et, ullamcorper justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin metus eros, nec varius tortor tristique ut. Orci varius natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. Mauris sed dui viverra, congue lorem id, congue diam. Integer hendrerit ultrices ligula non elementum.
+        Suspendisse lobortis ligula sit amet pulvinar tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+      Nunc id sapien in tortor aliquam bibendum. Praesent pretium mollis diam at eleifend.</p>
+    </div>
+  </div>
+</section>
+</div>
+</div>
+<div class="accueil">
   <div class="row" id="boxbank">
     <div class="col" id="box">
       <%= image_tag "box.jpg", crop: :fill, id: "imgbox" %>
-      <p>Besoin de déménageur ?</p>
+      <h2 id="haccueil">Besoin de déménageur ?</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
+        Integer nec erat tincidunt, dapibus metus et, ullamcorper justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin metus eros, nec varius tortor tristique ut.</p>
     </div>
     <div class="col" id="bank">
       <%= image_tag "bank.jpg", crop: :fill, id: "imgbank" %>
-      <p> Besoin d'une banque au meilleur taux ?</p>
+      <h2 id="haccueil"> Besoin d'une banque au meilleur taux ?</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
+        Integer nec erat tincidunt, dapibus metus et, ullamcorper justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin metus eros, nec varius tortor tristique ut.</p>
+
     </div>
+    <div class="col" id="bank">
+      <%= image_tag "bank.jpg", crop: :fill, id: "imgbank" %>
+      <h2 id="haccueil"> Besoin d'une banque au meilleur taux ?</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
+        Integer nec erat tincidunt, dapibus metus et, ullamcorper justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin metus eros, nec varius tortor tristique ut.</p>
+    </div>
+  </div>
 </div>
+<div class="container">
+  <section class="container-boxes">
+    <div class="box">
+    <div class="text">
+      <h3>Immobilier</h3>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
+        Integer nec erat tincidunt, dapibus metus et, ullamcorper justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin metus eros, nec varius tortor tristique ut. Orci varius natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. Mauris sed dui viverra, congue lorem id, congue diam. Integer hendrerit ultrices ligula non elementum.
+        Suspendisse lobortis ligula sit amet pulvinar tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+      Nunc id sapien in tortor aliquam bibendum. Praesent pretium mollis diam at eleifend.</p>
+    </div>
   </div>
-  <script>
-    $(document).ready(function() {
-      $('.carousel').carousel({
-        interval: 4000
-      })
-    });</script>
+  <div class="box">
+    <div class="text">
+      <h3>Immobilier</h3>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
+        Integer nec erat tincidunt, dapibus metus et, ullamcorper justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin metus eros, nec varius tortor tristique ut. Orci varius natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. Mauris sed dui viverra, congue lorem id, congue diam. Integer hendrerit ultrices ligula non elementum.
+        Suspendisse lobortis ligula sit amet pulvinar tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+      Nunc id sapien in tortor aliquam bibendum. Praesent pretium mollis diam at eleifend.</p>
+
+    </div>
   </div>
+  <div class="box">
+    <div class="text">
+      <h3>Immobilier</h3>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
+        Integer nec erat tincidunt, dapibus metus et, ullamcorper justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin metus eros, nec varius tortor tristique ut. Orci varius natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. Mauris sed dui viverra, congue lorem id, congue diam. Integer hendrerit ultrices ligula non elementum.
+        Suspendisse lobortis ligula sit amet pulvinar tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+      Nunc id sapien in tortor aliquam bibendum. Praesent pretium mollis diam at eleifend.</p>
+
+    </div>
+  </div>
+  <div class="box">
+    <div class="text">
+      <h3>Immobilier</h3>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
+        Integer nec erat tincidunt, dapibus metus et, ullamcorper justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin metus eros, nec varius tortor tristique ut. Orci varius natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. Mauris sed dui viverra, congue lorem id, congue diam. Integer hendrerit ultrices ligula non elementum.
+        Suspendisse lobortis ligula sit amet pulvinar tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+      Nunc id sapien in tortor aliquam bibendum. Praesent pretium mollis diam at eleifend.</p>
+
+    </div>
+  </div>
+</section>
+</div>
+</div>
+<script>
+  $(document).ready(function() {
+    $('.carousel').carousel({
+      interval: 4000
+    })
+  });</script>
+</div>
 </body>

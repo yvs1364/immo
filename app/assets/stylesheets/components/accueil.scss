@@ -1,18 +1,32 @@
 
 .accueil{
-  border-radius: 8px;
   padding: 10px;
   border: solid 3px #9F98E8;
   box-shadow: 0 0 15px -5px #000;
-  background-color: rgba(255, 255, 255, .7)
+  background-color: rgba(255, 255, 255, .7);
+  margin-left: -2em;
+  margin-bottom: 3em;
+  margin-top: 3em;
+  height: 40em;
+  width: 100vw;
+}
+#haccueil{
+  font-size: 30px !important;
+  font-weight: bold !important;
+  font-family: "Merriweather" !important;
 }
 .accueil p{
-  font-size: 1.75em !important;
+  font-size: 1.5em !important;
   text-align: -webkit-auto;
   font-family: "Josefin Sans", sans-serif !important;
   color: black !important;
   opacity: .8 !important;
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 #box {
   padding-left: 50px;
