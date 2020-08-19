@@ -19,9 +19,10 @@
 
 <body>
   <%= yield %>
-<%= render "shared/footer" %>
+
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application' %>
   <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
+  <%= render "shared/footer" %>
 </body>
 </html>

@@ -1,47 +1,57 @@
 
 select{
-    border: 1px solid #CCC;
-    font-size: 14px;
-    color: #5a5a5a;
-    padding: 10px;
-    width: 200px;
-    border-radius: 8px;
+  border: 1px solid #CCC;
+  font-size: 14px;
+  color: black;
+  opacity: 0.8;
+  padding: 10px;
+  width: 200px;
+  border-radius: 8px;
 }
 option{
-    font-family: 'Montserrat',sans-serif;
-    border: 1px solid #CCC;
+  font-family: 'Montserrat',sans-serif;
+  border: 1px solid #CCC;
 }
 #form-estimate{
-    width: 60em;
-    height: 50em;
-    background: #e6e6e6;
-    border-radius: 8px;
-    box-shadow: 0 0 40px -10px #000;
-    margin: calc(50vh - 250px) auto;
-    padding: 20px 30px;
-    max-width: calc(100vw - 40px);
-    box-sizing: border-box;
-    font-family: 'Montserrat',sans-serif;
-    position: relative;
-    border: 5px solid #93FB9D;
+  width: 60em;
+  height: 50em;
+  background:rgba(255, 255, 204,.7);
+  border-radius: 8px;
+  box-shadow: 0 0 40px -5px #000;
+  margin: calc(50vh - 250px) auto;
+  padding: 20px 30px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  font-family: 'Montserrat',sans-serif;
+  position: relative;
+  border: 3px solid #93FB9D;
 }
 #h2-estimate {
-    margin-top :10px;
-    padding-bottom: 10px;
-    width: 350px;
-    color: #78788c;
-    border-bottom: 3px solid #78788c;
+  margin-top: 25px;
+  padding-bottom: 10px;
+  width: 315px;
+  color: black;
+  opacity: 0.8;
+  border-bottom: 3px solid #93FB9D;
+  font-family: 'Cabin Condensed', serif !important;
 }
 #bar-estimate{
-    content:'Hi';
-    position:absolute;
-    top:-20px;
-    right:-20px;
-    background:#50505a;
-    color:#fff;
-    width:45em;
-    padding:16px 4px 16px 45px;
-    border-radius:6px;
-    font-size:13px;
-    box-shadow:10px 10px 40px -14px #000;
+  content:'Hi';
+  position:absolute;
+  top:-20px;
+  right:-20px;
+  background:#50505a;
+  color:#fff;
+  width:45em;
+  padding:16px 4px 16px 45px;
+  border-radius:8px;
+  font-size:13px;
+  box-shadow:10px 10px 40px -14px #000;
+}
+#form-estimate input{
+  border-bottom: 2px solid #93FB9D;
+}
+#form-estimate p{
+  color: black !important;
+  font-family:'Josefin Sans',sans-serif;
 }

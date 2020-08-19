@@ -1,38 +1,40 @@
 <body id="estimate-contact">
   <div class="container-fluid">
     <div class="container">
-      <h5><strong><%= link_to "Faire une recherche ", propertys_path, id: "back" %></strong></h5>
-      <form class="form" id="form-contact">
-        <h2 id="h2-contact-nous">Contactez nous</h2>
-        <p id="p1">Pour toutes informations, contactez nous.<p>
+      <h5 style="font-size: 2em;" id="back"><%= link_to   propertys_path do %>
+        Faire une recherche <%= fa_icon "search" %>
+        <% end %>
+        </h5>
+        <form class="form" id="form-contact">
+          <h2 id="h2-contact-nous">Contactez nous</h2>
+          <p id="p1">Pour toutes informations, contactez nous.<p>
 
-          <p id="p1">Il vous suffit de compléter ce formulaire et nous ferons de notre mieux pour y répondre au plus vite.<p>
-            <p type="Votre nom*:"><input placeholder="Nom"></input></p>
-            <p type="Votre adresse email*:"><input placeholder="Email"></input></p>
-            <p type="Votre téléphone*:"><input placeholder="01 23 45 67 89"></input></p>
-            <p type="Message:"><input placeholder="Votre message"></input></p>
-
-
-            <button>Envoyé le message</button>
-            <div id="bar">
-              <h6>07.23.12.25.39</h6>
-              <h6> immo+@mail.com </h6>
-              <h6>Agence située à marseille </h6>
-            </div>
-            <h2 id="h2-map">Notre agence</h2>
-            <div id="map"></div>
-            <script>
-              function initMap() {
-                var marseille = {lat: 43.3, lng: 5.4};
-                var map = new google.maps.Map(
-                  document.getElementById('map'), {zoom: 15, center: marseille});
-                var marker = new google.maps.Marker({position: marseille, map: map});
-              }
+            <p id="p1">Il vous suffit de compléter ce formulaire et nous ferons de notre mieux pour y répondre au plus vite.<p>
+              <p type="Votre nom*:"><input placeholder="Nom"></input></p>
+              <p type="Votre adresse email*:"><input placeholder="Email"></input></p>
+              <p type="Votre téléphone*:"><input placeholder="01 23 45 67 89"></input></p>
+              <p type="Votre message*:" id="margin-message"></p>
+              <textarea placeholder="Votre message"></textarea>
+              <button>Envoyé le message</button>
+              <div id="bar">
+                <h6>07.23.12.25.39</h6>
+                <h6> immo+@mail.com </h6>
+                <h6>Agence située à marseille </h6>
+              </div>
+              <h2 id="h2-map">Notre agence</h2>
+              <div id="map"></div>
+              <script>
+                function initMap() {
+                  var marseille = {lat: 43.3, lng: 5.4};
+                  var map = new google.maps.Map(
+                    document.getElementById('map'), {zoom: 15, center: marseille});
+                  var marker = new google.maps.Marker({position: marseille, map: map});
+                }
+              </script>
+              <script defer
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoU_mc_G8koG5TTc4d_OKXDYNoFxXcU_s&callback=initMap">
             </script>
-            <script defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoU_mc_G8koG5TTc4d_OKXDYNoFxXcU_s&callback=initMap">
-          </script>
-        </form>
-      </div>
+          </form>
+        </div>
 
-    </body>
+      </body>

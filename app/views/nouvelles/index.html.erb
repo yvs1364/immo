@@ -3,8 +3,10 @@
    <div id="Carousel" class="carousel slide">
     <div class="carousel-inner">
       <div class="carousel-content">
-       <h5><strong><%= link_to "Faire une recherche ", propertys_path %></strong></h5>
-       <div class="button-effect">
+       <h5 style="font-size: 2em;" id="back"><%= link_to   propertys_path do %>
+        Faire une recherche <%= fa_icon "search" %>
+        <% end %></h5>
+        <div class="button-effect">
          <h3><%= link_to "Blog", actualitys_path, class: "effect effect-5"%>
           <%= link_to "Contact", contact_path, class: "effect effect-5" %></h3>
         </div>
