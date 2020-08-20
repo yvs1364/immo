@@ -1,11 +1,12 @@
 <body id="blog">
-      <h5 style="font-size: 2em;" id="back"><%= link_to  actualitys_path do %>
+  <h5 style="font-size: 2em;" id="back"><%= link_to  actualitys_path do %>
     <%= fa_icon "chevron-left" %> Retour
     <% end %>
   </h5>
-    <div class="container" id="cadreactu">
-      <%= image_tag "article.jpg", id: "imgactu"%>
-        <h1> <%= @actuality.name %> <h1>
-        <p id="texte"> <%= @actuality.texte %> </p>
+  <div class="container" id="cadreactu">
+    <%= image_tag "article.jpg", id: "imgactu"%>
+    <h1> <%= @actuality.name %> <h1>
+      <p id="texte"> <%= @actuality.texte %> </p>
+      <p style="margin-left: 15px; font-size: 0.5em !important;"> <%= @actuality.date %></p>
     </div>
-</body>
+  </body>

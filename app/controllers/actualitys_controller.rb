@@ -2,7 +2,7 @@
 
 class ActualitysController < ApplicationController
   def index
-    @actualitys = Actuality.all
+    @actualitys = Actuality.order(date: :desc)
   end
 
   def show

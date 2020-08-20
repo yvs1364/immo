@@ -53,6 +53,7 @@
         <%= image_tag "new.jpg" %>
         <h2 class="masonry-title"> <%= n.name %> </h2>
         <p class="masonry-description"> <%= n.texte%></p>
+        <p style="margin-left: 20px;"> <%= n.date %></p>
         <h3><%= link_to  nouvelle_path(n) do %>
           Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
           <% end %> </h3>

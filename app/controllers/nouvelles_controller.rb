@@ -2,7 +2,7 @@
 
 class NouvellesController < ApplicationController
   def index
-    @nouvelles = Nouvelle.all
+    @nouvelles = Nouvelle.order(date: :desc)
   end
 
   def show

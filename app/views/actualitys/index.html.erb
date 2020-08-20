@@ -54,7 +54,7 @@
         <%= image_tag "article.jpg" %>
         <h2 class="masonry-title"> <%= a.name %> </h2>
         <p class="masonry-description"> <%= a.texte%></p>
-        <p> <%= a.date %></p>
+        <p style="margin-left: 20px;"> <%= a.date %></p>
         <h3><%= link_to   actuality_path(a) do %>
           Voir <%= image_tag "icons-plus.png", class: "imageplus"%>
           <% end %> </h3>
