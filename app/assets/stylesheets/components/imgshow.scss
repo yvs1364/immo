@@ -9,6 +9,7 @@
 
 /* The Modal (background) */
 .modal {
+
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -24,11 +25,14 @@
 
 /* Modal Content (Image) */
 .modal-content {
+  margin-right: 20em !important;
+  top: 1px;
   margin: auto;
   display: block;
   width: 80%;
   max-width: 700px;
   height: auto;
+  border-radius: 8px !important;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
