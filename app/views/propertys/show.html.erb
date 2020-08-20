@@ -96,14 +96,17 @@
   <!--The div element for the map -->
   <div id="map-container">
     <div id="map" data-markers="<%= @markers.to_json %>"></div>
-    <div class="col-contact">
+    <div class="col-contact" id="contact-property">
      <%= image_tag "man.jpg",id: "avatar"%>
      <h1>Ce bien vous plaît ?</h1>
+
      <p>Contactez-nous au 07.23.12.25.39 </p>
      <p>Ou par E-mail: immo+@mail.com</p>
-     <p>Nom: <input placeholder="Votre nom"></input></p>
-     <p>Ou par message<textarea placeholder="Votre message"></textarea></p>
-     <button>Envoyé le message</button>
+     <p>Ou par message</p>
+       <p>Nom: <input placeholder="Votre nom"></input></p>
+       <p>Email: <input placeholder="immo+@mail.com"></input></p>
+       <p>Message: <textarea placeholder="Votre message"></textarea></p>
+       <button>Envoyé le message</button>
    </div>
    <script>
             //recup data from map

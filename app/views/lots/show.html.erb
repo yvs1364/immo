@@ -1,97 +1,99 @@
 <body id="sell">
-<div class="container-fluid">
+  <div class="container-fluid">
     <h5 style="font-size: 2em;" id="back"><%= link_to lots_path do %>
-    <%= fa_icon "chevron-left" %> Retour
-    <% end %>
-  </h5>
-<div class="container">
-  <div class="row">
-    <div class="d-flex justify-content-start">
-      <div id="bigimg">
-        <%= image_tag "lot2.jpg", onclick: "openModal();currentSlide(1)", class: "bigimg" %>
+      <%= fa_icon "chevron-left" %> Retour
+      <% end %>
+    </h5>
+    <div class="container">
+      <div class="row">
+        <div class="d-flex justify-content-start">
+          <div id="bigimg">
+            <%= image_tag "lot2.jpg", onclick: "openModal();currentSlide(1)", class: "bigimg" %>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center" id="littleimg">
+          <%= image_tag "lot1.jpg", onclick: "openModal();currentSlide(2)", class: "hover-shadow" %>
+          <%= image_tag "lot3.jpg", onclick: "openModal();currentSlide(3)", class: "hover-shadow" %>
+        </div>
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content">
+
+            <div class="mySlides">
+              <div class="numbertext">1 / 3</div>
+              <%= image_tag "lot1.jpg" %>
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">2 / 3</div>
+              <%= image_tag "lot2.jpg" %>
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">3 / 3</div>
+              <%= image_tag "lot3.jpg" %>
+            </div>
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+            </div>
+
+            <!-- Thumbnail image controls -->
+            <div class="column">
+              <%= image_tag "lot1.jpg",class: "demo", onclick: "currentSlide(1)"%>
+            </div>
+
+            <div class="column">
+             <%= image_tag "lot2.jpg",class: "demo", onclick: "currentSlide(2)"%>
+           </div>
+
+           <div class="column">
+            <%= image_tag "lot3.jpg",class: "demo", onclick: "currentSlide(3)"%>
+          </div>
+        </div>
       </div>
+      <div class="d-flex justify-content-start" id="flexlot">
+        <div id="divflex">
+          <p><%= "#{@lot.name} de #{@lot.metre}"%><strong> m²</strong></p>
+        </div>
+
+        <div id="divflex">
+          <p><strong>Adresse: </strong><%= @lot.city %></p>
+          <p><strong>Prix: </strong><%= @lot.price.to_s.in_groups_of(3) %><strong> €</strong></p>
+          <p><strong>Reférence de l'annonce: </strong><%= @lot.ref %></p>
+        </div>
+
+        <div id="divflex2">
+          <p><strong>Déscription du bien: </strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
+            Integer nec erat tincidunt, dapibus metus et, ullamcorper justo.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <% @markers = { lat: @lot.latitude, lng: @lot.longitude} %>
+      </div>
+
     </div>
-    <div class="d-flex justify-content-center" id="littleimg">
-      <%= image_tag "lot1.jpg", onclick: "openModal();currentSlide(2)", class: "hover-shadow" %>
-      <%= image_tag "lot3.jpg", onclick: "openModal();currentSlide(3)", class: "hover-shadow" %>
-    </div>
-    <!-- The Modal/Lightbox -->
-    <div id="myModal" class="modal">
-      <span class="close cursor" onclick="closeModal()">&times;</span>
-      <div class="modal-content">
+    <div class="container">
 
-        <div class="mySlides">
-          <div class="numbertext">1 / 3</div>
-          <%= image_tag "lot1.jpg" %>
-        </div>
-
-        <div class="mySlides">
-          <div class="numbertext">2 / 3</div>
-          <%= image_tag "lot2.jpg" %>
-        </div>
-
-        <div class="mySlides">
-          <div class="numbertext">3 / 3</div>
-          <%= image_tag "lot3.jpg" %>
-        </div>
-        <!-- Next/previous controls -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        <!-- Caption text -->
-        <div class="caption-container">
-        </div>
-
-        <!-- Thumbnail image controls -->
-        <div class="column">
-          <%= image_tag "lot1.jpg",class: "demo", onclick: "currentSlide(1)"%>
-        </div>
-
-        <div class="column">
-         <%= image_tag "lot2.jpg",class: "demo", onclick: "currentSlide(2)"%>
+      <div id="map-container">
+        <div id="map" data-markers="<%= @markers.to_json %>"></div>
+        <div class="col-contact" id="contact-lot">
+         <%= image_tag "man.jpg",id: "avatar"%>
+         <h1>Ce bien vous plaît ?</h1>
+         <p>Contactez-nous au 07.23.12.25.39 </p>
+         <p>Ou par E-mail: immo+@mail.com</p>
+         <p>Ou par message</p>
+         <p>Nom: <input placeholder="Votre nom"></input></p>
+         <p>Email: <input placeholder="immo+@mail.com"></input></p>
+         <p>Message: <textarea placeholder="Votre message"></textarea></p>
+         <button>Envoyé le message</button>
        </div>
-
-       <div class="column">
-        <%= image_tag "lot3.jpg",class: "demo", onclick: "currentSlide(3)"%>
-      </div>
-    </div>
-  </div>
- <div class="d-flex justify-content-start" id="flexlot">
-  <div id="divflex">
-    <p><%= "#{@lot.name} de #{@lot.metre}"%><strong> m²</strong></p>
-  </div>
-
-  <div id="divflex">
-    <p><strong>Adresse: </strong><%= @lot.city %></p>
-    <p><strong>Prix: </strong><%= @lot.price.to_s.in_groups_of(3) %><strong> €</strong></p>
-    <p><strong>Reférence de l'annonce: </strong><%= @lot.ref %></p>
-  </div>
-
-  <div id="divflex2">
-    <p><strong>Déscription du bien: </strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
-      Integer nec erat tincidunt, dapibus metus et, ullamcorper justo.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </div>
-  <% @markers = { lat: @lot.latitude, lng: @lot.longitude} %>
-</div>
-
-</div>
-<div class="container">
-
-  <div id="map-container">
-    <div id="map" data-markers="<%= @markers.to_json %>"></div>
-    <div class="col-contact">
-     <%= image_tag "man.jpg",id: "avatar"%>
-     <h1>Ce bien vous plaît ?</h1>
-     <p>Contactez-nous au 07.23.12.25.39 </p>
-     <p>Ou par E-mail: immo+@mail.com</p>
-     <p>Nom: <input placeholder="Votre nom"></input></p>
-     <p>Ou par message<textarea placeholder="Votre message"></textarea></p>
-     <button>Envoyé le message</button>
-   </div>
-   <script>
+       <script>
             //recup data from map
             const mapElement = document.getElementById("map");
             //parse markers from map

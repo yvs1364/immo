@@ -19,7 +19,7 @@
   text-shadow: 0 1px 2px rgba(0,0,0,.6);
 }
 .carousel-content h1 {
-  font-family: 'roboto',sans-serif;
+  font-family: 'Merriweather',sans-serif  !important;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
@@ -95,7 +95,7 @@
   padding-left: 10px;
 }
 .carousel-content a:hover{
-  font-family: 'Montserrat',sans-serif;
+  font-family: 'Merriweather',sans-serif  !important;
   text-decoration: none !important;
   color:rgba(255,255,255, 0.9);
 }
@@ -126,22 +126,22 @@
   margin-top: 11%;
 }
 .actunew h2 {
- font-family: 'roboto',sans-serif;
- color: white;
- text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
- font-size: 5em;
- font-weight: bold;
- text-align: center;
- width: 10em;
+  font-family: 'Cabin Condensed', serif !important;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 5em;
+  font-weight: bold;
+  text-align: center;
+  width: 10em;
 }
 .actunew p{
-  font-family: 'Montserrat',sans-serif;
-  position: absolute;
-  color: white !important;
-  opacity: 1 !important;
-  font-weight: bold;
-  margin-top: 10px !important;
-  margin-left: 10%;
-  font-size: 2em;
+ font-family:'Josefin Sans',sans-serif !important;
+ position: absolute;
+ color: white !important;
+ opacity: 1 !important;
+ font-weight: bold;
+ margin-top: 10px !important;
+ margin-left: 10%;
+ font-size: 2em;
 }
 

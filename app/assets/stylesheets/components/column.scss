@@ -12,36 +12,34 @@
 
 }
 .col-contact{
-  height: 45em;
+  height: 48em;
   width: 25em;
   right: 0;
   position: absolute;
-  top: 3%;
-  border: 3px solid #e6e6e6;
-  background: #59ABE3;
+  top: 1px;
+  background: rgba(255, 255, 204,.7);
   padding: 15px;
   margin-right: 10px;
-  box-shadow: 2px 2px 15px #B1B1B1;
+  box-shadow:0 0 40px -5px #000;
   border-radius: 8px;
   border: 3px solid #78788c;
-  text-align: center;
 }
 .col-contact h1 {
   color: black;
   opacity: 0.8;
   font-size: 2em;
-  font-family: "roboto";
+  font-family: 'Merriweather',sans-serif  !important;
+  text-align: center;
 }
 
 .col-contact p {
   color: black;
   opacity: 0.8;
-  font-size: 1.45em;
-  font-family: "roboto";
-  margin: -10px 0 10px !important;
+  font-size: 1.25em;
+  font-family: 'Josefin Sans',sans-serif !important;
+  margin: -20px 0 10px !important;
 }
 #back-show{
-  font-family: 'roboto';
   margin-top: 10px;
   margin-left: 10px;
   color: #59abe3;
@@ -53,17 +51,19 @@
   left:0;
 }
 #back-show:hover{
-  font-family: 'roboto';
   text-decoration: none !important;
   color: rgba(  89, 171, 227, .7);
 }
 #avatar{
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   overflow: hidden;
   border-radius: 50%;
   object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 #divflex{
   padding-left: 10px;
@@ -89,20 +89,33 @@
   background: white;
   box-shadow: 2px 2px 15px #B1B1B1;
   border-radius: 8px;
+  margin-top: 20px;
 }
 #flexlocate{
   border: 3px solid #60dfcd;
   background: white;
   box-shadow: 2px 2px 15px #B1B1B1;
   border-radius: 8px;
+  margin-top: 20px;
 }
 #flexlot{
   border: 3px solid #42FCDB;
   background: white;
   box-shadow: 2px 2px 15px #B1B1B1;
   border-radius: 8px;
+  margin-top: 20px;
 }
 textarea {
-    background: none;
-    width: 100%;
-  }
+  background: none;
+  width: 100%;
+  margin-bottom: -10px !important;
+}
+#contact-property{
+  border: 3px solid #1e9afe !important;
+}
+#contact-location{
+  border: 3px solid #60dfcd !important;
+}
+#contact-lot{
+  border: 3px solid #42FCDB !important;
+}
