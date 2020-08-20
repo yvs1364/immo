@@ -7,6 +7,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
 Property.destroy_all
 Actuality.destroy_all
 Nouvelle.destroy_all
@@ -16,6 +18,7 @@ Lot.destroy_all
 10.times do
   Actuality.create!(
     name: %w[title1 title2 title3 title4 title5 title6 title7 title8 title9 title10].sample,
+    date: Faker::Date.between(from: 2.year.ago, to: Date.today),
     texte: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
     Integer nec erat tincidunt, dapibus metus et, ullamcorper justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin metus eros, nec varius tortor tristique ut. Orci varius natoque penatibus et magnis dis parturient montes,
@@ -35,12 +38,13 @@ Lot.destroy_all
     Maecenas sed arcu sit amet ex luctus faucibus. Phasellus ac interdum massa, scelerisque cursus ante.
     Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nunc orci, feugiat in sem quis, cursus congue tellus. Sed id suscipit lacus.
     Phasellus aliquet facilisis ex, ut lobortis neque tincidunt id. Cras semper libero neque, ac tincidunt nunc molestie eget. Fusce efficitur elementum sapien, in efficitur ligula placerat a.
-    Donec nec nisi lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.'
-  )
+    Donec nec nisi lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+    )
 end
 4.times do
   Nouvelle.create!(
     name: %w[title1 title2 title3 title4 title5 title6 title7 title8 title9 title10].sample,
+    date: Faker::Date.between(from: 2.year.ago, to: Date.today),
     texte: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
     Integer nec erat tincidunt, dapibus metus et, ullamcorper justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin metus eros, nec varius tortor tristique ut. Orci varius natoque penatibus et magnis dis parturient montes,
@@ -61,7 +65,7 @@ end
     Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nunc orci, feugiat in sem quis, cursus congue tellus. Sed id suscipit lacus.
     Phasellus aliquet facilisis ex, ut lobortis neque tincidunt id. Cras semper libero neque, ac tincidunt nunc molestie eget. Fusce efficitur elementum sapien, in efficitur ligula placerat a.
     Donec nec nisi lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.'
-  )
+    )
 end
 
 20.times do
@@ -71,9 +75,9 @@ end
     metre: rand(30...130),
     city: ['76 rue carnot Pau', "136 Rue du Vallon des Auffes
       13007 Marseille", 'Artouste', '1 Cours Camille Pelletan, 13450 Grans'].sample,
-    price: rand(100_000...500_000),
-    ref: rand(1001...1011)
-  )
+      price: rand(100_000...500_000),
+      ref: rand(1001...1011)
+      )
 end
 
 20.times do
@@ -83,9 +87,9 @@ end
     metre: rand(30...130),
     city: ['76 rue carnot Pau', "136 Rue du Vallon des Auffes
       13007 Marseille", 'Artouste', '1 Cours Camille Pelletan, 13450 Grans'].sample,
-    price: rand(300...2000),
-    ref: rand(1051...1100)
-  )
+      price: rand(300...2000),
+      ref: rand(1051...1100)
+      )
 end
 
 20.times do
@@ -93,10 +97,10 @@ end
     name: 'Terrain',
     city: ['76 rue carnot Pau', "136 Rue du Vallon des Auffes
       13007 Marseille", 'Artouste', '1 Cours Camille Pelletan, 13450 Grans'].sample,
-    metre: rand(1000...10_000),
-    price: rand(10_000...200_000),
-    ref: rand(1101...1150)
-  )
+      metre: rand(1000...10_000),
+      price: rand(40_000...200_000),
+      ref: rand(1101...1150)
+      )
 end
 
 puts "actuality #{Actuality.count}"

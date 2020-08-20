@@ -9,3 +9,8 @@ class ActualitysController < ApplicationController
     @actuality = Actuality.find(params[:id])
   end
 end
+class Date
+  def current
+    ::Time.zone ? ::Time.zone.today : ::Date.today
+  end
+end

@@ -39,3 +39,5 @@ class String
     chars.each_slice(n).map(&:join).join(sep)
   end
 end
+
+
