@@ -1,82 +1,82 @@
 <body id="sell">
-<div class="container-fluid">
-  <h5 style="font-size: 2em;" id="back"><%= link_to   propertys_path do %>
-    <%= fa_icon "chevron-left" %> Retour
-    <% end %>
-  </h5>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="d-flex justify-content-start">
-      <div class="modal-content">
+  <div class="container-fluid">
+    <h5 style="font-size: 2em;" id="back"><%= link_to   propertys_path do %>
+      <%= fa_icon "chevron-left" %> Retour
+      <% end %>
+    </h5>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="d-flex justify-content-start">
+        <div class="modal-content">
 
-        <div class="mySlides">
-          <div class="numbertext">1 / 4</div>
-          <%= image_tag "room.jpg" %>
+          <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <%= image_tag "room.jpg" %>
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <%= image_tag "room2.jpg" %>
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <%= image_tag "room3.jpg" %>
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <%= image_tag "room4.jpg" %>
+          </div>
+
+          <!-- Next/previous controls -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          <!-- Caption text -->
+          <div class="caption-container">
+          </div>
+
+          <!-- Thumbnail image controls -->
+          <div class="column">
+            <%= image_tag "room.jpg",class: "demo", onclick: "currentSlide(1)"%>
+          </div>
+
+          <div class="column">
+           <%= image_tag "room2.jpg",class: "demo", onclick: "currentSlide(2)"%>
+         </div>
+
+         <div class="column">
+          <%= image_tag "room3.jpg",class: "demo", onclick: "currentSlide(3)"%>
         </div>
 
-        <div class="mySlides">
-          <div class="numbertext">2 / 4</div>
-          <%= image_tag "room2.jpg" %>
-        </div>
-
-        <div class="mySlides">
-          <div class="numbertext">3 / 4</div>
-          <%= image_tag "room3.jpg" %>
-        </div>
-
-        <div class="mySlides">
-          <div class="numbertext">4 / 4</div>
-          <%= image_tag "room4.jpg" %>
-        </div>
-
-        <!-- Next/previous controls -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        <!-- Caption text -->
-        <div class="caption-container">
-        </div>
-
-        <!-- Thumbnail image controls -->
         <div class="column">
-          <%= image_tag "room.jpg",class: "demo", onclick: "currentSlide(1)"%>
-        </div>
-
-        <div class="column">
-         <%= image_tag "room2.jpg",class: "demo", onclick: "currentSlide(2)"%>
+         <%= image_tag "room4.jpg",class: "demo", onclick: "currentSlide(4)"%>
        </div>
-
-       <div class="column">
-        <%= image_tag "room3.jpg",class: "demo", onclick: "currentSlide(3)"%>
-      </div>
-
-      <div class="column">
-       <%= image_tag "room4.jpg",class: "demo", onclick: "currentSlide(4)"%>
      </div>
    </div>
- </div>
- <div class="d-flex justify-content-start" id="flexprop">
-  <div id="divflex">
-    <p><%= "#{@property.name} de #{@property.metre}"%><strong> m²</strong></p>
-    <p><strong>Pièces: </strong><%= @property.room %></p>
-  </div>
+   <div class="d-flex justify-content-start" id="flexprop">
+    <div id="divflex">
+      <p><%= "#{@property.name} de #{@property.metre}"%><strong> m²</strong></p>
+      <p><strong>Pièces: </strong><%= @property.room %></p>
+    </div>
 
-  <div id="divflex">
-    <p><strong>Adresse: </strong><%= @property.city %></p>
-    <p><strong>Prix: </strong><%= @property.price.to_s.in_groups_of(3) %><strong> €</strong></p>
-    <p><strong>Reférence de l'annonce: </strong><%= @property.ref %></p>
-  </div>
+    <div id="divflex">
+      <p><strong>Adresse: </strong><%= @property.city %></p>
+      <p><strong>Prix: </strong><%= @property.price.to_s.in_groups_of(3) %><strong> €</strong></p>
+      <p><strong>Reférence de l'annonce: </strong><%= @property.ref %></p>
+    </div>
 
-  <div id="divflex2">
-    <p><strong>Déscription du bien: </strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
-      Integer nec erat tincidunt, dapibus metus et, ullamcorper justo.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div id="divflex2">
+      <p><strong>Déscription du bien: </strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Maecenas tempus risus nec ultricies condimentum. Sed pulvinar enim eget dui posuere iaculis.
+        Integer nec erat tincidunt, dapibus metus et, ullamcorper justo.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <% @markers = { lat: @property.latitude, lng: @property.longitude} %>
   </div>
-  <% @markers = { lat: @property.latitude, lng: @property.longitude} %>
-</div>
 
 </div>
 <div class="container">
@@ -90,12 +90,14 @@
      <p>Contactez-nous au 07.23.12.25.39 </p>
      <p>Ou par E-mail: immo+@mail.com</p>
      <p>Ou par message</p>
-       <p>Nom: <input placeholder="Votre nom"></input></p>
-       <p>Email: <input placeholder="immo+@mail.com"></input></p>
-       <p>Message: <textarea placeholder="Votre message"></textarea></p>
-       <button>Envoyé le message</button>
+     <p>Nom: <input placeholder="Votre nom"></input></p>
+     <p>Prénom: <input placeholder="Votre prénom"></input></p>
+     <p>Email: <input placeholder="immo+@mail.com"></input></p>
+     <p>Message: <textarea placeholder="Votre message"></textarea></p>
+     <button>Envoyé le message</button>
    </div>
-   <script>
+ </div>
+ <script>
             //recup data from map
             const mapElement = document.getElementById("map");
             //parse markers from map

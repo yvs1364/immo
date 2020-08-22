@@ -8,7 +8,6 @@
   <div class="container">
     <div class="row">
       <div class="d-flex justify-content-start">
-        <span class="close cursor" onclick="closeModal()">&times;</span>
         <div class="modal-content">
 
           <div class="mySlides">
@@ -57,6 +56,7 @@
        </div>
      </div>
    </div>
+   </div>
    <div class="d-flex justify-content-start" id="flexlocate">
     <div id="divflex">
       <p><%= "#{@location.name} de #{@location.metre}"%><strong> m²</strong></p>
@@ -92,10 +92,12 @@
      <p>Ou par E-mail: immo+@mail.com</p>
      <p>Ou par message</p>
        <p>Nom: <input placeholder="Votre nom"></input></p>
+       <p>Prénom: <input placeholder="Votre prénom"></input></p>
        <p>Email: <input placeholder="immo+@mail.com"></input></p>
        <p>Message: <textarea placeholder="Votre message"></textarea></p>
        <button>Envoyé le message</button>
    </div>
+ </div>
    <script>
             //recup data from map
             const mapElement = document.getElementById("map");
@@ -119,15 +121,6 @@
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoU_mc_G8koG5TTc4d_OKXDYNoFxXcU_s&callback=initMap">
         </script>
         <script>
-// Open the Modal
-function openModal() {
-  document.getElementById("myModal").style.display = "block";
-}
-
-// Close the Modal
-function closeModal() {
-  document.getElementById("myModal").style.display = "none";
-}
 
 var slideIndex = 1;
 showSlides(slideIndex);
